@@ -4237,6 +4237,22 @@
   display: flex;
 }
 
+.about-page [data-name="Card/UX Research & Strategy"].reveal-ready {
+  transition-delay: 0s;
+}
+
+.about-page [data-name="Card/UI & Interaction Design"].reveal-ready {
+  transition-delay: .1s;
+}
+
+.about-page [data-name="Card/AI-Assisted Design"].reveal-ready {
+  transition-delay: .2s;
+}
+
+.about-page [data-name="Card/Growth & Marketing Graphics"].reveal-ready {
+  transition-delay: .3s;
+}
+
 @supports (animation-timeline: view()) {
   .case-study-card {
     transform-origin: top;

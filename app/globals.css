@@ -1349,6 +1349,22 @@
   gap: 200px;
 }
 
+.about-page [data-name='Card/UX Research & Strategy'].reveal-ready {
+  transition-delay: 0ms;
+}
+
+.about-page [data-name='Card/UI & Interaction Design'].reveal-ready {
+  transition-delay: 100ms;
+}
+
+.about-page [data-name='Card/AI-Assisted Design'].reveal-ready {
+  transition-delay: 200ms;
+}
+
+.about-page [data-name='Card/Growth & Marketing Graphics'].reveal-ready {
+  transition-delay: 300ms;
+}
+
 @supports (animation-timeline: view()) {
   .case-study-card {
     animation: case-study-stack-scale linear both;
