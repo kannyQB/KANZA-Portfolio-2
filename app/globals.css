@@ -1245,6 +1245,118 @@
     transition: none !important;
   }
 }
+
+.case-study-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  isolation: isolate;
+  padding: 72px 0 32px;
+}
+
+.case-study-card {
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 16px 40px rgba(26, 14, 20, 0.08);
+  transition: none;
+}
+
+.case-study-card:hover {
+  transform: none;
+}
+
+.case-study-card:nth-child(1) { z-index: 1; }
+.case-study-card:nth-child(2) { z-index: 2; }
+.case-study-card:nth-child(3) { z-index: 3; }
+.case-study-card:nth-child(4) { z-index: 4; }
+.case-study-card:nth-child(5) { z-index: 5; }
+
+.case-study-card__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+}
+
+.case-study-card__media {
+  aspect-ratio: 600 / 513;
+  border-radius: 24px;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.case-study-card__media > img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.case-study-card__media .comparison-slider {
+  width: 100%;
+}
+
+.case-study-card__title {
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.08;
+}
+
+.case-study-card__content > [data-name='Problem'],
+.case-study-card__content > [data-name='What I did'],
+.case-study-card__content > [data-name='Outcome'] {
+  flex-shrink: 1;
+}
+
+.case-study-stack__footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+@supports (animation-timeline: view()) {
+  .case-study-card {
+    animation: case-study-stack-scale linear both;
+    animation-timeline: view(block);
+    animation-range: exit 0% exit 100%;
+    transform-origin: top center;
+  }
+
+  @keyframes case-study-stack-scale {
+    to {
+      transform: scale(0.97);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .case-study-stack {
+    gap: 32px;
+    padding-top: 48px;
+  }
+
+  .case-study-card {
+    border-radius: 24px;
+    padding: 22px;
+    position: relative;
+    top: auto;
+  }
+
+  .case-study-card__layout {
+    gap: 28px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-study-card__title {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study-card {
+    animation: none !important;
+    position: static;
+    transform: none !important;
+  }
+}
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }

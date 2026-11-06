@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/0baj_f1026en5.css","style"]
+:HL["/_next/static/chunks/3-bxnb52--9n-.css","style"]
 :HL["/assets/c3095.svg","image"]
 :HL["/assets/1da72.png","image"]
 :HL["/assets/d1878.png","image"]
@@ -18,4 +18,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"vigil","h":96,"c":"$Q3"}]]
 1:[["children",{"s":"work","h":96,"c":"$Q2"}]]
-0:{"b":"aTOOkJPre2vK05wS6u70j","t":{"t":{"s":"","h":84,"c":"$Q1"}}}
+0:{"b":"O6MaQfG3yW6mao84xBe8J","t":{"t":{"s":"","h":84,"c":"$Q1"}}}

@@ -2507,7 +2507,8 @@ function InteractionLayer({ children }) {
             router.push("/work?view=list");
             return;
         }
-        const route = name === "CTA/Case" ? "/work/screen-mirroring" : name === "CTA/Process" ? "/about" : routeForLabel(name.startsWith("Card/") ? name.slice(5) : name.startsWith("Row/") ? name.slice(4) : label);
+        const caseStudyName = target.closest("[data-name^='Case card/']")?.dataset.name?.slice("Case card/".length);
+        const route = name === "CTA/Case" ? routeForLabel(caseStudyName ?? "") ?? "/work" : name === "CTA/Process" ? "/about" : routeForLabel(name.startsWith("Card/") ? name.slice(5) : name.startsWith("Row/") ? name.slice(4) : label);
         if (route) {
             event.preventDefault();
             router.push(route);
@@ -2528,7 +2529,7 @@ function InteractionLayer({ children }) {
                         children: "Work"
                     }, void 0, false, {
                         fileName: "[project]/src/components/interaction-layer.tsx",
-                        lineNumber: 225,
+                        lineNumber: 228,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2537,7 +2538,7 @@ function InteractionLayer({ children }) {
                         children: "About"
                     }, void 0, false, {
                         fileName: "[project]/src/components/interaction-layer.tsx",
-                        lineNumber: 231,
+                        lineNumber: 234,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2546,19 +2547,19 @@ function InteractionLayer({ children }) {
                         children: "Contact"
                     }, void 0, false, {
                         fileName: "[project]/src/components/interaction-layer.tsx",
-                        lineNumber: 237,
+                        lineNumber: 240,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/interaction-layer.tsx",
-                lineNumber: 224,
+                lineNumber: 227,
                 columnNumber: 7
             }, this)
         ]
     }, pathname, true, {
         fileName: "[project]/src/components/interaction-layer.tsx",
-        lineNumber: 222,
+        lineNumber: 225,
         columnNumber: 5
     }, this);
 }

@@ -200,9 +200,12 @@ export default function InteractionLayer({
       return
     }
 
+    const caseStudyName = target
+      .closest<HTMLElement>("[data-name^='Case card/']")
+      ?.dataset.name?.slice("Case card/".length)
     const route =
       name === "CTA/Case"
-        ? "/work/screen-mirroring"
+        ? (routeForLabel(caseStudyName ?? "") ?? "/work")
         : name === "CTA/Process"
           ? "/about"
           : routeForLabel(
