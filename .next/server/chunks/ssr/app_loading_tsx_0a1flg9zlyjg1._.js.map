@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../app/loading.tsx"],"sourcesContent":["export default function Loading() {\n  return <div className=\"min-h-screen bg-[#f8f4f2]\" aria-label=\"Loading page\" />\n}\n"],"names":["Loading","className"],"mappings":"wEAAe,SAASA,EACtB,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,CAAIC,UAAU,4BAA4B,aAAW,gBAC/D"}

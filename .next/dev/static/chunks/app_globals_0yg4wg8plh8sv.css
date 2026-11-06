@@ -1938,6 +1938,10 @@
     padding: 48px;
   }
 
+  .px-0 {
+    padding-inline: 0;
+  }
+
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
