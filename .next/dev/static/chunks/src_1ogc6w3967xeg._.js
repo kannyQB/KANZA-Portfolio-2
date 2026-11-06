@@ -582,13 +582,20 @@ function HomeCaseStudies() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "case-study-stack",
         children: [
-            caseStudies.map((study)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CaseStudyCard, {
-                    study: study
-                }, study.number, false, {
-                    fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                    lineNumber: 377,
-                    columnNumber: 9
-                }, this)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "case-study-stack__cards",
+                children: caseStudies.map((study)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CaseStudyCard, {
+                        study: study
+                    }, study.number, false, {
+                        fileName: "[project]/src/components/HomeCaseStudies.tsx",
+                        lineNumber: 378,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/HomeCaseStudies.tsx",
+                lineNumber: 376,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "case-study-stack__footer",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -602,18 +609,18 @@ function HomeCaseStudies() {
                             children: "↗"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                            lineNumber: 385,
+                            lineNumber: 387,
                             columnNumber: 28
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                    lineNumber: 380,
+                    lineNumber: 382,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                lineNumber: 379,
+                lineNumber: 381,
                 columnNumber: 7
             }, this)
         ]
@@ -1499,7 +1506,7 @@ function HomeReviewFixesV2V3Eu() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-white content-stretch flex flex-col items-start overflow-clip px-0 py-[64px] relative shrink-0 w-full",
+                    className: "bg-white content-stretch flex flex-col items-start overflow-clip px-0 pt-[64px] pb-[128px] relative shrink-0 w-full",
                     "data-node-id": "346:348",
                     "data-name": "Selected work",
                     children: [

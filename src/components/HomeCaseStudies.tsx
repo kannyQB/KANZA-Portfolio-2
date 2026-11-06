@@ -373,9 +373,11 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
 export default function HomeCaseStudies() {
   return (
     <div className="case-study-stack">
-      {caseStudies.map((study) => (
-        <CaseStudyCard key={study.number} study={study} />
-      ))}
+      <div className="case-study-stack__cards">
+        {caseStudies.map((study) => (
+          <CaseStudyCard key={study.number} study={study} />
+        ))}
+      </div>
       <div className="case-study-stack__footer">
         <Link
           className="featured-cases__all"

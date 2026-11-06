@@ -457,7 +457,7 @@ export default function HomeReviewFixesV2V3Eu() {
         </div>
         <DesignerStrip />
         <div
-          className="bg-white content-stretch flex flex-col items-start overflow-clip px-0 py-[64px] relative shrink-0 w-full"
+          className="bg-white content-stretch flex flex-col items-start overflow-clip px-0 pt-[64px] pb-[128px] relative shrink-0 w-full"
           data-node-id="346:348"
           data-name="Selected work"
         >

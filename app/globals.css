@@ -1249,10 +1249,15 @@
 .case-study-stack {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   isolation: isolate;
   padding: 0;
   width: 100%;
+}
+
+.case-study-stack__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .case-study-card {
@@ -1315,8 +1320,11 @@
 
 .case-study-stack__footer {
   display: flex;
+  margin-top: 56px;
+  padding-bottom: 8px;
+  position: relative;
   justify-content: center;
-  padding: 0;
+  z-index: 2;
 }
 
 .home-page [data-name='Selected work'] > [data-name='Section Header'] {
@@ -1383,8 +1391,15 @@
 
 @media (max-width: 900px) {
   .case-study-stack {
-    gap: 24px;
     padding: 0;
+  }
+
+  .case-study-stack__cards {
+    gap: 24px;
+  }
+
+  .case-study-stack__footer {
+    margin-top: 32px;
   }
 
   .home-page [data-name='Selected work'] > [data-name='Section Header'] {
