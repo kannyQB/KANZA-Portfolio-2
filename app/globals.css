@@ -1386,3 +1386,7 @@
 .marquee-track.marquee-quotes {
   animation-duration: 40s;
 }
+/* Temporary wireframe stand-in until a real wireframe image is added */
+.case-study-card__media--stand-in .comparison-slider__before-image {
+  filter: grayscale(1) contrast(0.85) brightness(1.05);
+}

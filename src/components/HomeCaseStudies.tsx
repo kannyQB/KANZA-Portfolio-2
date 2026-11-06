@@ -273,24 +273,18 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
         className="case-study-card__layout content-stretch flex gap-[56px] items-center relative shrink-0 w-full"
         data-name="Feature/Website Redesign"
       >
-        <div className="case-study-card__media">
-          {study.beforeImage ? (
-            <BeforeAfterSlider
-              after={study.image}
-              aspectRatio={600 / 513}
-              before={study.beforeImage}
-              ariaLabel={`Compare the ${study.name} wireframe with the final interface`}
-            />
-          ) : (
-            <img
-              alt={`${study.name} project preview`}
-              className="size-full rounded-[24px] object-cover"
-              loading={study.number === "02" ? "eager" : "lazy"}
-              src={study.image}
-            />
-          )}
-        </div>
-
+        <div
+  className={`case-study-card__media ${
+    study.beforeImage ? "" : "case-study-card__media--stand-in"
+  }`}
+>
+  <BeforeAfterSlider
+    after={study.image}
+    aspectRatio={600 / 513}
+    before={study.beforeImage ?? study.image}
+    ariaLabel={`Compare the ${study.name} wireframe with the final interface`}
+  />
+</div>  
         <div
           className="case-study-card__content content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px relative"
           data-name="Text"

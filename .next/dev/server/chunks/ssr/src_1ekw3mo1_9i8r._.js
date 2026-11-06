@@ -386,25 +386,16 @@ function CaseStudyCard({ study }) {
                 "data-name": "Feature/Website Redesign",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "case-study-card__media",
-                        children: study.beforeImage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BeforeAfterSlider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        className: `case-study-card__media ${study.beforeImage ? "" : "case-study-card__media--stand-in"}`,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BeforeAfterSlider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             after: study.image,
                             aspectRatio: 600 / 513,
-                            before: study.beforeImage,
+                            before: study.beforeImage ?? study.image,
                             ariaLabel: `Compare the ${study.name} wireframe with the final interface`
                         }, void 0, false, {
                             fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                            lineNumber: 278,
-                            columnNumber: 13
-                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                            alt: `${study.name} project preview`,
-                            className: "size-full rounded-[24px] object-cover",
-                            loading: study.number === "02" ? "eager" : "lazy",
-                            src: study.image
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                            lineNumber: 285,
-                            columnNumber: 13
+                            lineNumber: 281,
+                            columnNumber: 3
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
@@ -423,12 +414,12 @@ function CaseStudyCard({ study }) {
                                         children: tag
                                     }, tag, false, {
                                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                        lineNumber: 300,
+                                        lineNumber: 294,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                lineNumber: 298,
+                                lineNumber: 292,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -441,7 +432,7 @@ function CaseStudyCard({ study }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                        lineNumber: 311,
+                                        lineNumber: 305,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -449,13 +440,13 @@ function CaseStudyCard({ study }) {
                                         children: study.subtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                        lineNumber: 312,
+                                        lineNumber: 306,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                lineNumber: 310,
+                                lineNumber: 304,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -470,7 +461,7 @@ function CaseStudyCard({ study }) {
                                                 children: kpi.value
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                                lineNumber: 327,
+                                                lineNumber: 321,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -478,18 +469,18 @@ function CaseStudyCard({ study }) {
                                                 children: kpi.label
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                                lineNumber: 330,
+                                                lineNumber: 324,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, `${kpi.value}-${kpi.label}`, true, {
                                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                        lineNumber: 322,
+                                        lineNumber: 316,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                lineNumber: 317,
+                                lineNumber: 311,
                                 columnNumber: 11
                             }, this),
                             [
@@ -514,7 +505,7 @@ function CaseStudyCard({ study }) {
                                             children: heading
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                            lineNumber: 351,
+                                            lineNumber: 345,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -522,13 +513,13 @@ function CaseStudyCard({ study }) {
                                             children: copy
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                            lineNumber: 354,
+                                            lineNumber: 348,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, heading, true, {
                                     fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                    lineNumber: 346,
+                                    lineNumber: 340,
                                     columnNumber: 15
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -544,19 +535,19 @@ function CaseStudyCard({ study }) {
                                         src: "/assets/c3095.svg"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                        lineNumber: 366,
+                                        lineNumber: 360,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                                lineNumber: 360,
+                                lineNumber: 354,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                        lineNumber: 294,
+                        lineNumber: 288,
                         columnNumber: 9
                     }, this)
                 ]
@@ -580,7 +571,7 @@ function HomeCaseStudies() {
                     study: study
                 }, study.number, false, {
                     fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                    lineNumber: 383,
+                    lineNumber: 377,
                     columnNumber: 9
                 }, this)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -596,24 +587,24 @@ function HomeCaseStudies() {
                             children: "↗"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                            lineNumber: 391,
+                            lineNumber: 385,
                             columnNumber: 28
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                    lineNumber: 386,
+                    lineNumber: 380,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HomeCaseStudies.tsx",
-                lineNumber: 385,
+                lineNumber: 379,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HomeCaseStudies.tsx",
-        lineNumber: 381,
+        lineNumber: 375,
         columnNumber: 5
     }, this);
 }
