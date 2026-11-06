@@ -147,7 +147,7 @@ export default function AboutRefinedReviewV2V3Eu() {
           >
             <img
               alt="Kanza Iqbal"
-              src="/assets/picture.png"
+              src="/assets/picture.jpg"
               className="h-[400px] w-full rounded-[24px] object-cover"
             />
             <p
