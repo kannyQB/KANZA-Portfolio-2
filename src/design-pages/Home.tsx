@@ -457,7 +457,7 @@ export default function HomeReviewFixesV2V3Eu() {
         </div>
         <DesignerStrip />
         <div
-          className="bg-white content-stretch flex flex-col items-start overflow-clip px-[270px] py-[64px] relative shrink-0 w-full"
+          className="bg-white content-stretch flex flex-col items-start overflow-clip px-0 py-[64px] relative shrink-0 w-full"
           data-node-id="346:348"
           data-name="Selected work"
         >
@@ -495,7 +495,7 @@ export default function HomeReviewFixesV2V3Eu() {
           <HomeCaseStudies />
         </div>
         <div
-          className="bg-[#f8f4f2] content-stretch flex flex-col items-start overflow-clip px-[270px] py-[89px] relative shrink-0 w-full"
+          className="bg-[#f8f4f2] content-stretch flex flex-col items-start overflow-clip px-0 py-[89px] relative shrink-0 w-full"
           data-node-id="346:398"
           data-name="Testimonials"
         >
@@ -704,34 +704,35 @@ export default function HomeReviewFixesV2V3Eu() {
         </div>
         <WorkedWithStrip />
         <div
-          className="bg-white content-stretch flex gap-[200px] items-start overflow-clip px-[270px] py-[72px] relative shrink-0 w-full"
+          className="bg-white content-stretch flex items-start overflow-clip px-0 py-[72px] relative shrink-0 w-full"
           data-node-id="346:450"
           data-name="Services"
         >
-          <div
-            className="[word-break:break-word] content-stretch flex flex-col gap-[16px] items-start overflow-clip relative shrink-0 w-[260px]"
-            data-node-id="346:451"
-            data-name="Left"
-          >
-            <p
-              className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[#7a0d3b] text-[12px] tracking-[0.72px] uppercase whitespace-nowrap"
-              data-node-id="346:452"
+          <div className="home-services__layout">
+            <div
+              className="[word-break:break-word] content-stretch flex flex-col gap-[16px] items-start overflow-clip relative shrink-0 w-[260px]"
+              data-node-id="346:451"
+              data-name="Left"
             >
-              (What I do)
-            </p>
-            <p
-              className="font-['Geist:Regular'] font-normal leading-[26px] min-w-full relative shrink-0 text-[#6e5b63] text-[16px] w-[min-content]"
-              data-node-id="346:453"
+              <p
+                className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[#7a0d3b] text-[12px] tracking-[0.72px] uppercase whitespace-nowrap"
+                data-node-id="346:452"
+              >
+                (What I do)
+              </p>
+              <p
+                className="font-['Geist:Regular'] font-normal leading-[26px] min-w-full relative shrink-0 text-[#6e5b63] text-[16px] w-[min-content]"
+                data-node-id="346:453"
+              >
+                Four ways I can help your product — from the first question to a
+                build-ready file.
+              </p>
+            </div>
+            <div
+              className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative"
+              data-node-id="346:454"
+              data-name="List"
             >
-              Four ways I can help your product — from the first question to a
-              build-ready file.
-            </p>
-          </div>
-          <div
-            className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative"
-            data-node-id="346:454"
-            data-name="List"
-          >
             <div
               className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[32px] items-center py-[32px] relative shrink-0 w-full"
               data-node-id="346:455"
@@ -902,6 +903,7 @@ export default function HomeReviewFixesV2V3Eu() {
                   />
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>

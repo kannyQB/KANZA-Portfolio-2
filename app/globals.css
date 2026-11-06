@@ -1272,27 +1272,34 @@
 .case-study-card:nth-child(5) { top: 160px; z-index: 5; }
 
 .case-study-card__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  display: flex;
 }
 
 .case-study-card__media {
+  align-self: center;
   aspect-ratio: 600 / 513;
   border-radius: 24px;
+  flex: 0 0 min(600px, 48%);
   min-width: 0;
   overflow: hidden;
-  width: 100%;
+  width: min(600px, 48%);
 }
 
-.case-study-card__media > img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
+.case-study-card__content {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
+.case-study-card__media img,
 .case-study-card__media .comparison-slider {
+  height: 100%;
   width: 100%;
+}
+
+.case-study-card__media img {
+  display: block;
+  object-fit: cover;
 }
 
 .case-study-card__title {
@@ -1316,6 +1323,24 @@
   margin-bottom: 72px;
 }
 
+.home-page [data-name='Selected work'] > [data-name='Section Header'],
+.home-page [data-name='Selected work'] > .case-study-stack,
+.home-page [data-name='Testimonials'] > [data-name='Split'],
+.home-page [data-name='Services'] > .home-services__layout {
+  margin-inline: auto;
+  max-width: 1282px;
+  width: 100%;
+}
+
+.home-page [data-name='Testimonials'] > [data-name='Split'] {
+  gap: 100px;
+}
+
+.home-services__layout {
+  display: flex;
+  gap: 200px;
+}
+
 @supports (animation-timeline: view()) {
   .case-study-card {
     animation: case-study-stack-scale linear both;
@@ -1333,8 +1358,20 @@
 
 @media (max-width: 1100px) {
   .case-study-card__layout {
+    align-items: stretch;
+    flex-direction: column;
     gap: 28px;
-    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-study-card__media {
+    align-self: stretch;
+    flex: none;
+    width: 100%;
+  }
+
+  .home-services__layout {
+    flex-direction: column;
+    gap: 28px;
   }
 }
 
@@ -1368,7 +1405,6 @@
 
   .case-study-card__layout {
     gap: 28px;
-    grid-template-columns: minmax(0, 1fr);
   }
 
   .case-study-card__title {

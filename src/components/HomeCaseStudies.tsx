@@ -270,7 +270,7 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
       </div>
 
       <div
-        className="case-study-card__layout content-stretch flex gap-[56px] items-center relative shrink-0 w-full"
+        className="case-study-card__layout flex gap-[56px] relative w-full"
         data-name="Feature/Website Redesign"
       >
         <div
@@ -286,7 +286,7 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
   />
 </div>  
         <div
-          className="case-study-card__content content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px relative"
+          className="case-study-card__content flex flex-col gap-[24px] items-start relative"
           data-name="Text"
         >
           <div className="content-stretch flex flex-wrap gap-[8px] items-start relative shrink-0">

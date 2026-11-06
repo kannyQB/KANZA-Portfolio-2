@@ -1623,10 +1623,6 @@
     gap: 124px;
   }
 
-  .gap-\[200px\] {
-    gap: 200px;
-  }
-
   .self-stretch {
     align-self: stretch;
   }
@@ -4166,27 +4162,33 @@
 }
 
 .case-study-card__layout {
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  display: grid;
+  align-items: center;
+  display: flex;
 }
 
 .case-study-card__media {
   aspect-ratio: 600 / 513;
   border-radius: 24px;
-  width: 100%;
+  flex: 0 0 min(600px, 48%);
+  align-self: center;
+  width: min(600px, 48%);
   min-width: 0;
   overflow: hidden;
 }
 
-.case-study-card__media > img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  display: block;
+.case-study-card__content {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
-.case-study-card__media .comparison-slider {
+.case-study-card__media img, .case-study-card__media .comparison-slider {
   width: 100%;
+  height: 100%;
+}
+
+.case-study-card__media img {
+  object-fit: cover;
+  display: block;
 }
 
 .case-study-card__title {
@@ -4208,6 +4210,21 @@
   margin-bottom: 72px;
 }
 
+.home-page [data-name="Selected work"] > [data-name="Section Header"], .home-page [data-name="Selected work"] > .case-study-stack, .home-page [data-name="Testimonials"] > [data-name="Split"], .home-page [data-name="Services"] > .home-services__layout {
+  width: 100%;
+  max-width: 1282px;
+  margin-inline: auto;
+}
+
+.home-page [data-name="Testimonials"] > [data-name="Split"] {
+  gap: 100px;
+}
+
+.home-services__layout {
+  gap: 200px;
+  display: flex;
+}
+
 @supports (animation-timeline: view()) {
   .case-study-card {
     transform-origin: top;
@@ -4225,7 +4242,19 @@
 
 @media (max-width: 1100px) {
   .case-study-card__layout {
-    grid-template-columns: minmax(0, 1fr);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .case-study-card__media {
+    flex: none;
+    align-self: stretch;
+    width: 100%;
+  }
+
+  .home-services__layout {
+    flex-direction: column;
     gap: 28px;
   }
 }
@@ -4259,7 +4288,6 @@
   }
 
   .case-study-card__layout {
-    grid-template-columns: minmax(0, 1fr);
     gap: 28px;
   }
 
