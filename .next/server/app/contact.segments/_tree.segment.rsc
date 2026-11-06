@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/3-bxnb52--9n-.css","style"]
+:HL["/_next/static/chunks/3ysht4cuh611i.css","style"]
 :HL["/assets/c3095.svg","image"]
 :HL["/assets/16348.svg","image"]
 :HL["/assets/d4cb8.svg","image"]
@@ -6,4 +6,4 @@
 :HL["/assets/39cd9.svg","image"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"contact","h":96,"c":"$Q2"}]]
-0:{"b":"O6MaQfG3yW6mao84xBe8J","t":{"t":{"s":"","h":84,"c":"$Q1"}}}
+0:{"b":"A1Gz9HCOFK5cBKIdQcJV3","t":{"t":{"s":"","h":84,"c":"$Q1"}}}

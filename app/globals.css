@@ -1327,6 +1327,13 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .case-study-card__layout {
+    gap: 28px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .case-study-stack {
     gap: 32px;
@@ -1334,9 +1341,14 @@
   }
 
   .case-study-card {
+    animation: none;
     border-radius: 24px;
     padding: 22px;
     position: relative;
+  }
+
+  .case-study-card:hover {
+    transform: none;
     top: auto;
   }
 

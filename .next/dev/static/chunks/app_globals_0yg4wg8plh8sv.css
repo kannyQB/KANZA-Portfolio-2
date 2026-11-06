@@ -4210,6 +4210,13 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .case-study-card__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+
 @media (max-width: 900px) {
   .case-study-stack {
     gap: 32px;
@@ -4219,8 +4226,13 @@
   .case-study-card {
     border-radius: 24px;
     padding: 22px;
+    animation: none;
     position: relative;
+  }
+
+  .case-study-card:hover {
     top: auto;
+    transform: none;
   }
 
   .case-study-card__layout {
