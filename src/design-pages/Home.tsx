@@ -495,12 +495,12 @@ export default function HomeReviewFixesV2V3Eu() {
           <HomeCaseStudies />
         </div>
         <div
-          className="bg-[#f8f4f2] content-stretch flex flex-col items-start overflow-clip px-0 py-[89px] relative shrink-0 w-full"
+          className="bg-[#f8f4f2] content-stretch flex flex-col items-start overflow-visible px-0 py-[89px] relative shrink-0 w-full"
           data-node-id="346:398"
           data-name="Testimonials"
         >
           <div
-            className="content-stretch flex gap-[124px] items-center overflow-clip relative shrink-0 w-full"
+            className="content-stretch flex gap-[124px] items-center overflow-visible relative shrink-0 w-full"
             data-node-id="346:399"
             data-name="Split"
           >
