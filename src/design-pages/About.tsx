@@ -1,3 +1,5 @@
+import AboutHelpScroll from "@/components/AboutHelpScroll"
+
 const assetPathPrefix = "/assets"
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgFrame = `${assetPathPrefix}/e726a.svg`
@@ -949,13 +951,13 @@ export default function AboutRefinedReviewV2V3Eu() {
           data-name="Rectangle"
         />
       </div>
-      <div
+      <AboutHelpScroll
         className="bg-[#f8f4f2] content-stretch flex flex-col h-[1150px] items-start overflow-clip px-[270px] py-[64px] relative shrink-0 w-full"
         data-node-id="346:633"
         data-name="What I do — How I can help"
       >
         <div
-          className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
+          className="about-help-track grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
           data-node-id="346:634"
         >
           <div
@@ -1576,7 +1578,7 @@ export default function AboutRefinedReviewV2V3Eu() {
             </p>
           </div>
         </div>
-      </div>
+      </AboutHelpScroll>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[90px] items-start pb-[80px] pt-[60px] px-[270px] relative shrink-0 w-full"
         data-node-id="346:752"

@@ -12,6 +12,8 @@ function routeForLabel(label: string) {
   if (/kanza iqbal/i.test(label)) return "/"
   if (/screen mirroring/i.test(label)) return "/work/screen-mirroring"
   if (/taskflow/i.test(label)) return "/work/taskflow"
+  if (/freelance ops/i.test(label)) return "/work/freelance-ops"
+  if (/maisonette/i.test(label)) return "/work/maisonette"
   if (/\bvigil\b/i.test(label)) return "/work/vigil"
   if (/about/i.test(label)) return "/about"
   if (/contact|let’s talk|let's talk/i.test(label)) return "/contact"

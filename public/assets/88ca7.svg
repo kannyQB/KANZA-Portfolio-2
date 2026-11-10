@@ -1,9 +1,9 @@
 <svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Step dot" clip-path="url(#clip0_0_39)">
-<path id="Ellipse" d="M13.5 6C13.5 10.1421 10.1421 13.5 6 13.5C1.85786 13.5 -1.5 10.1421 -1.5 6C-1.5 1.85786 1.85786 -1.5 6 -1.5C10.1421 -1.5 13.5 1.85786 13.5 6Z" fill="#7A0D3B" stroke-width="3" stroke="white"/>
+<g id="Step dot" clip-path="url(#clip0_0_38)">
+<circle id="Ellipse" cx="6" cy="6" r="7.5" fill="#7A0D3B" stroke-width="3" stroke="white"/>
 </g>
 <defs>
-<clipPath id="clip0_0_39">
+<clipPath id="clip0_0_38">
 <rect width="12" height="12" fill="white"/>
 </clipPath>
 </defs>

@@ -1,978 +1,532 @@
-const assetPathPrefix = "/assets"
-const imgEllipse = `${assetPathPrefix}/836d9.svg`
-const imgHoverPreviewVigil = `${assetPathPrefix}/1da72.png`
-const imgIconArrow = `${assetPathPrefix}/c3095.svg`
-const imgFrame = `${assetPathPrefix}/65b28.svg`
-const imgFrame1 = `${assetPathPrefix}/e028d.svg`
-const imgFrame2 = `${assetPathPrefix}/d4cb8.svg`
-const imgFrame3 = `${assetPathPrefix}/764f1.svg`
-const imgFrame4 = `${assetPathPrefix}/39cd9.svg`
+"use client"
 
-type StatusBadgeProps = {
-  className?: string
-  status?: "Shipped"
+import { useState } from "react"
+
+const assetPathPrefix = "/assets"
+const imgImage = `${assetPathPrefix}/39efb.png`
+const imgImage1 = `${assetPathPrefix}/976ff.png`
+const imgImage2 = `${assetPathPrefix}/1da72.png`
+const imgImage3 = `${assetPathPrefix}/5fbd8.png`
+const imgImage4 = `${assetPathPrefix}/9b1d5.png`
+const imgImage5 = `${assetPathPrefix}/aa772.png`
+const imgImage6 = `${assetPathPrefix}/9204a.png`
+const imgIconArrow = `${assetPathPrefix}/c3095.svg`
+const imgGridDark = `${assetPathPrefix}/65b28.svg`
+const imgListWhite = `${assetPathPrefix}/e028d.svg`
+const imgGridWhite = `${assetPathPrefix}/16c6b.svg`
+const imgListDark = `${assetPathPrefix}/1a91a.svg`
+const imgGo = `${assetPathPrefix}/0f7cd.svg`
+const imgDotGreen = `${assetPathPrefix}/836d9.svg`
+const imgDotGrey = `${assetPathPrefix}/8a632.svg`
+const imgFrame4 = `${assetPathPrefix}/d4cb8.svg`
+const imgFrame5 = `${assetPathPrefix}/764f1.svg`
+const imgFrame6 = `${assetPathPrefix}/39cd9.svg`
+
+// HOVER PREVIEW IMAGES (public/assets/ mein)
+const hoverScreenMirroring = `${assetPathPrefix}/hover-screen-mirroring.png`
+const hoverVigil = `${assetPathPrefix}/hover-vigil.png`
+const hoverTaskflow = `${assetPathPrefix}/hover-taskflow.png`
+const hoverAiFaceAging = `${assetPathPrefix}/hover-ai-face-aging.png`
+const hoverFreelanceOps = `${assetPathPrefix}/hover-freelance-ops.png`
+const hoverMaisonette = `${assetPathPrefix}/hover-maisonette.png`
+
+type Category = "saas" | "mobile"
+type Status = "Shipped" | "Concept"
+
+type Project = {
+  title: string
+  sub: string
+  gridMeta: string
+  listMeta: string
+  cat: Category
+  status: Status
+  images: string[]
+  hoverImage: string
+  live?: { href: string; gridLabel: string; listLabel: string }
 }
 
-function StatusBadge({ className, status = "Shipped" }: StatusBadgeProps) {
+const projects: Project[] = [
+  {
+    title: "Screen Mirroring",
+    sub: "Cast your phone to any TV",
+    gridMeta: "Mobile app · Android · 2026 · Shipped",
+    listMeta: "Mobile app · 2026",
+    cat: "mobile",
+    status: "Shipped",
+    images: [imgImage],
+    hoverImage: hoverScreenMirroring,
+  },
+  {
+    title: "Vigil",
+    sub: "A safety Command Platform",
+    gridMeta: "B2B SaaS · 2026 · Concept",
+    listMeta: "B2B SaaS · 2026",
+    cat: "saas",
+    status: "Concept",
+    images: [imgImage1, imgImage2],
+    hoverImage: hoverVigil,
+  },
+  {
+    title: "TaskFlow",
+    sub: "Calm control for teams",
+    gridMeta: "Dashboard · 2026 · Shipped",
+    listMeta: "Dashboard · 2026",
+    cat: "saas",
+    status: "Shipped",
+    images: [imgImage3],
+    hoverImage: hoverTaskflow,
+  },
+  {
+    title: "AI Face Aging",
+    sub: "See your future self",
+    gridMeta: "Mobile app · AI · 2026 · Shipped",
+    listMeta: "Mobile app · AI · 2026",
+    cat: "mobile",
+    status: "Shipped",
+    images: [imgImage4],
+    hoverImage: hoverAiFaceAging,
+  },
+  {
+    title: "Freelance Ops",
+    sub: "Business tools for freelancers",
+    gridMeta: "Mobile app · Fintech · 2025 · ",
+    listMeta: "Mobile app · Fintech · 2025",
+    cat: "mobile",
+    status: "Shipped",
+    images: [imgImage5],
+    hoverImage: hoverFreelanceOps,
+    live: {
+      href: "https://play.google.com/store/apps/details?id=com.freelanceops&hl=en",
+      gridLabel: "Live on Google Play ↗",
+      listLabel: "Live on Google Play ↗",
+    },
+  },
+  {
+    title: "Maisonette",
+    sub: "Luxury estate command center",
+    gridMeta: "SaaS · Real estate · 2026 · Shipped",
+    listMeta: "SaaS · Real estate · 2026",
+    cat: "saas",
+    status: "Shipped",
+    images: [imgImage6],
+    hoverImage: hoverMaisonette,
+  },
+]
+
+const filters: { label: string; value: "all" | Category }[] = [
+  { label: "All", value: "all" },
+  { label: "SaaS & dashboards", value: "saas" },
+  { label: "Mobile apps", value: "mobile" },
+]
+
+// Colors
+const DARK = "#1a0e14"
+const LINE = "#e7dadd"
+const MUTED = "#6e5b63"
+const PINK = "#f6dae5"
+const CREAM = "#f8f4f2"
+
+// Hover preview. Hover image na mile to project ki normal image dikhegi.
+function HoverPreview({
+  src,
+  fallback,
+  show,
+}: {
+  src: string
+  fallback: string
+  show: boolean
+}) {
+  const [current, setCurrent] = useState(src)
   return (
     <div
-      className={
-        className ||
-        "bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px]"
-      }
-      data-node-id="33:1490"
+      aria-hidden="true"
+      style={{
+        position: "absolute",
+        left: "52%",
+        top: "50%",
+        width: 287,
+        height: 201,
+        zIndex: 60,
+        pointerEvents: "none",
+        opacity: show ? 1 : 0,
+        transform: `translateY(-50%) rotate(4deg) scale(${show ? 1 : 0.95})`,
+        transformOrigin: "center",
+        transition: "opacity 300ms ease-out, transform 300ms ease-out",
+      }}
     >
       <div
-        className="relative shrink-0 size-[7px]"
-        data-node-id="33:1491"
-        data-name="Ellipse"
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          borderRadius: 16,
+          boxShadow: "0px 20px 40px 0px rgba(26,0,13,0.3)",
+        }}
       >
         <img
           alt=""
-          className="absolute block inset-0 max-w-none size-full"
-          src={imgEllipse}
+          src={current}
+          onError={() => {
+            if (current !== fallback) setCurrent(fallback)
+          }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            maxWidth: "none",
+            objectFit: "cover",
+          }}
         />
       </div>
-      <p
-        className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#1f9d57] text-[14px] whitespace-nowrap"
-        data-node-id="33:1492"
-      >
-        Shipped
-      </p>
     </div>
   )
 }
 
-export default function Desktop3() {
+export default function Desktop2() {
+  const [filter, setFilter] = useState<"all" | Category>("all")
+  // Default view. Grid se shuru karna ho to "list" ko "grid" kar do.
+  const [view, setView] = useState<"grid" | "list">("list")
+  const [hovered, setHovered] = useState<string | null>(null)
+
+  const visible = projects.filter((p) => filter === "all" || p.cat === filter)
+  const countOf = (v: "all" | Category) =>
+    v === "all" ? projects.length : projects.filter((p) => p.cat === v).length
+
   return (
     <div
-      className="bg-[#f5f4f0] relative size-full"
-      data-node-id="236:4384"
-      data-name="Desktop - 3"
+      className="bg-[#f8f4f2] content-stretch flex flex-col items-start relative size-full"
+      data-name="Work"
     >
+      {/* NAV */}
       <div
-        className="absolute content-stretch flex flex-col items-start left-[-2px] top-0 w-[1444px]"
-        data-node-id="236:4385"
+        className="bg-[#f8f4f2] border-[#e7dadd] border-b border-solid content-stretch flex items-center justify-between px-[270px] py-[22px] relative shrink-0 w-full"
+        data-name="Nav"
       >
-        <div
-          className="bg-[#f5f4f0] border-[#dedbd3] border-b border-solid content-stretch flex items-center justify-between px-[270px] py-[22px] relative shrink-0 w-full"
-          data-node-id="236:4386"
-          data-name="Nav"
-        >
-          <div
-            className="[word-break:break-word] content-stretch flex font-['Geist:Medium'] font-medium items-start leading-[28px] overflow-clip relative shrink-0 text-[20px] tracking-[-0.2px] whitespace-nowrap"
-            data-node-id="I236:4386;7:113"
-            data-name="Logo"
-          >
-            <p
-              className="relative shrink-0 text-[#121212]"
-              data-node-id="I236:4386;7:114"
-            >
-              Kanza Iqbal
+        <div className="[word-break:break-word] content-stretch flex font-['Geist:Medium'] font-medium items-start leading-[28px] overflow-clip relative shrink-0 text-[20px] tracking-[-0.2px] whitespace-nowrap">
+          <p className="relative shrink-0 text-[#1a0e14]">Kanza Iqbal</p>
+          <p className="relative shrink-0 text-[#7a0d3b]">.</p>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex gap-[40px] items-start leading-[26px] overflow-clip relative shrink-0 text-[16px] whitespace-nowrap">
+          <p className="[text-underline-position:from-font] decoration-from-font decoration-solid font-['Geist:Medium'] font-medium relative shrink-0 text-[#7a0d3b] underline">
+            Work
+          </p>
+          <p className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]">About</p>
+          <p className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]">Contact</p>
+        </div>
+        <div className="content-stretch flex gap-[20px] items-center overflow-clip relative shrink-0">
+          <p className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap">
+            Lahore · PKT
+          </p>
+          <div className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0">
+            <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[20px] relative shrink-0 text-[15px] text-white whitespace-nowrap">
+              Let’s talk
             </p>
-            <p
-              className="relative shrink-0 text-[#2d3beb]"
-              data-node-id="I236:4386;7:115"
-            >
-              .
-            </p>
-          </div>
-          <div
-            className="[word-break:break-word] content-stretch cursor-pointer flex gap-[40px] items-start leading-[0] overflow-clip relative shrink-0 text-[16px] whitespace-nowrap"
-            data-node-id="I236:4386;7:116"
-            data-name="Links"
-          >
-            <a
-              className="block font-['Geist:SemiBold'] font-semibold relative shrink-0 text-[#2d3beb]"
-              data-node-id="I236:4386;7:117"
-            >
-              <p className="decoration-[#7a0d3b] decoration-[2px] decoration-solid leading-[26px] underline">
-                Work
-              </p>
-            </a>
-            <a
-              className="block font-['Geist:Regular'] font-normal relative shrink-0 text-[#121212]"
-              data-node-id="I236:4386;7:118"
-            >
-              <p className="leading-[26px]">About</p>
-            </a>
-            <a
-              className="block font-['Geist:Regular'] font-normal relative shrink-0 text-[#121212]"
-              data-node-id="I236:4386;7:120"
-            >
-              <p className="leading-[26px]">Contact</p>
-            </a>
-          </div>
-          <div
-            className="content-stretch flex gap-[20px] items-center overflow-clip relative shrink-0"
-            data-node-id="I236:4386;7:121"
-            data-name="Right"
-          >
-            <p
-              className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#5e5d58] text-[14px] whitespace-nowrap"
-              data-node-id="I236:4386;7:122"
-            >
-              Lahore · PKT
-            </p>
-            <a
-              className="bg-[#121212] content-stretch cursor-pointer flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
-              data-node-id="I236:4386;7:123"
-              data-name="CTA"
-            >
-              <p
-                className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[20px] relative shrink-0 text-[15px] text-left text-white whitespace-nowrap"
-                data-node-id="I236:4386;7:123;3:42"
-              >
-                Let’s talk
-              </p>
-              <div
-                className="relative shrink-0 size-[16px]"
-                data-node-id="I236:4386;7:123;3:43"
-                data-name="icon/arrow"
-              >
-                <img
-                  alt=""
-                  className="absolute block inset-0 max-w-none size-full"
-                  src={imgIconArrow}
-                />
-              </div>
-            </a>
+            <div className="relative shrink-0 size-[16px]">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconArrow} />
+            </div>
           </div>
         </div>
-        <div
-          className="bg-[#f8f4f2] content-stretch flex flex-col items-start overflow-clip pb-[120px] pt-[96px] px-[270px] relative shrink-0 w-[1440px]"
-          data-node-id="236:4387"
-          data-name="Work W5 · Index + hover preview"
-        >
-          <div
-            className="content-stretch flex items-end justify-between pb-[64px] relative shrink-0 w-full"
-            data-node-id="236:4388"
-            data-name="Header"
-          >
-            <div
-              className="[word-break:break-word] content-stretch flex flex-col font-['Geist:Medium'] font-medium gap-[12px] items-start relative shrink-0 whitespace-nowrap"
-              data-node-id="236:4389"
-              data-name="Title"
-            >
-              <p
-                className="leading-[16px] relative shrink-0 text-[#7a0d3b] text-[12px] tracking-[0.72px] uppercase"
-                data-node-id="236:4390"
-              >
-                (Case studies)
-              </p>
-              <p
-                className="leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] tracking-[-2.88px]"
-                data-node-id="236:4391"
-              >
-                <span className="leading-[72px] text-[72px]">{`Problems I’ve `}</span>
-                <span className="font-['Instrument_Serif:Italic'] italic leading-[96px] text-[#7a0d3b] text-[78px] tracking-[-1.56px]">
-                  made simple
-                </span>
-                <span className="leading-[72px] text-[72px]">.</span>
-              </p>
-            </div>
-            <div
-              className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0"
-              data-node-id="236:4392"
-              data-name="Right"
-            >
-              <div
-                className="border border-[#e7dadd] border-solid content-stretch flex gap-[2px] items-start p-[3px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4393"
-                data-name="View toggle"
-              >
-                <div
-                  className="content-stretch flex gap-[6px] items-center px-[12px] py-[7px] relative rounded-[999px] shrink-0"
-                  data-node-id="236:4394"
-                  data-name="View/Grid"
-                >
-                  <div
-                    className="relative shrink-0 size-[14px]"
-                    data-node-id="236:4395"
-                    data-name="Frame"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgFrame}
-                    />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#1a0e14] text-[14px] whitespace-nowrap"
-                    data-node-id="236:4397"
-                  >
-                    Grid
-                  </p>
-                </div>
-                <div
-                  className="bg-[#1a0e14] content-stretch flex gap-[6px] items-center px-[12px] py-[7px] relative rounded-[999px] shrink-0"
-                  data-node-id="236:4398"
-                  data-name="View/List"
-                >
-                  <div
-                    className="relative shrink-0 size-[14px]"
-                    data-node-id="236:4399"
-                    data-name="Frame"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgFrame1}
-                    />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[14px] text-white whitespace-nowrap"
-                    data-node-id="236:4401"
-                  >
-                    List
-                  </p>
-                </div>
-              </div>
-              <p
-                className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
-                data-node-id="236:4402"
-              >
-                Hover a row to preview
-              </p>
-            </div>
+      </div>
+
+      {/* BODY */}
+      <div
+        className="content-stretch flex flex-col items-start pb-[120px] pt-[96px] px-[270px] relative shrink-0 w-full"
+        data-name="Body"
+      >
+        {/* Header */}
+        <div className="content-stretch flex items-end justify-between pb-[48px] relative shrink-0 w-full">
+          <div className="[word-break:break-word] content-stretch flex flex-col font-['Geist:Medium'] font-medium gap-[12px] items-start relative shrink-0 whitespace-nowrap">
+            <p className="leading-[16px] relative shrink-0 text-[#7a0d3b] text-[12px] tracking-[0.72px] uppercase">
+              (Case studies)
+            </p>
+            <p className="leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] tracking-[-2.88px]">
+              <span className="leading-[80px] text-[72px]">{`Problems I’ve `}</span>
+              <span className="font-['Instrument_Serif:Italic'] italic leading-[80px] text-[#7a0d3b] text-[78px] tracking-[-1.56px]">
+                made simple
+              </span>
+              <span className="leading-[80px] text-[72px]">.</span>
+            </p>
           </div>
-          <div
-            className="content-stretch flex h-[102px] items-start pb-[64px] relative shrink-0 w-full"
-            data-node-id="236:4403"
-            data-name="Toolbar"
-          >
-            <div
-              className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal gap-[8px] items-start leading-[22px] relative shrink-0 text-[14px] whitespace-nowrap"
-              data-node-id="236:4404"
-              data-name="Filters"
-            >
-              <div
-                className="bg-[#f6dae5] content-stretch flex gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4405"
-                data-name="Filter/All"
-              >
-                <p
-                  className="relative shrink-0 text-[#7a0d3b]"
-                  data-node-id="236:4406"
-                >
-                  All
-                </p>
-                <p
-                  className="relative shrink-0 text-[#6e5b63]"
-                  data-node-id="236:4407"
-                >
-                  9
-                </p>
-              </div>
-              <div
-                className="content-stretch flex gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4408"
-                data-name="Filter/SaaS & dashboards"
-              >
-                <p
-                  className="relative shrink-0 text-[#1a0e14]"
-                  data-node-id="236:4409"
-                >{`SaaS & dashboards`}</p>
-                <p
-                  className="relative shrink-0 text-[#6e5b63]"
-                  data-node-id="236:4410"
-                >
-                  2
-                </p>
-              </div>
-              <div
-                className="content-stretch flex gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4411"
-                data-name="Filter/Mobile apps"
-              >
-                <p
-                  className="relative shrink-0 text-[#1a0e14]"
-                  data-node-id="236:4412"
-                >
-                  Mobile apps
-                </p>
-                <p
-                  className="relative shrink-0 text-[#6e5b63]"
-                  data-node-id="236:4413"
-                >
-                  5
-                </p>
-              </div>
-              <div
-                className="content-stretch flex gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4414"
-                data-name="Filter/Web"
-              >
-                <p
-                  className="relative shrink-0 text-[#1a0e14]"
-                  data-node-id="236:4415"
-                >
-                  Web
-                </p>
-                <p
-                  className="relative shrink-0 text-[#6e5b63]"
-                  data-node-id="236:4416"
-                >
-                  2
-                </p>
-              </div>
-              <div
-                className="content-stretch flex gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0"
-                data-node-id="236:4417"
-                data-name="Filter/Concepts"
-              >
-                <p
-                  className="relative shrink-0 text-[#1a0e14]"
-                  data-node-id="236:4418"
-                >
-                  Concepts
-                </p>
-                <p
-                  className="relative shrink-0 text-[#6e5b63]"
-                  data-node-id="236:4419"
-                >
-                  1
-                </p>
-              </div>
+
+          <div className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0">
+            <div className="border border-[#e7dadd] border-solid content-stretch flex gap-[2px] items-start p-[3px] relative rounded-[999px] shrink-0">
+              {(
+                [
+                  { v: "grid", label: "Grid", on: imgGridWhite, off: imgGridDark },
+                  { v: "list", label: "List", on: imgListWhite, off: imgListDark },
+                ] as const
+              ).map((b) => {
+                const active = view === b.v
+                return (
+                  <button
+                    key={b.v}
+                    type="button"
+                    onClick={() => setView(b.v)}
+                    aria-pressed={active}
+                    className={`content-stretch flex cursor-pointer gap-[6px] items-center px-[12px] py-[7px] relative rounded-[999px] shrink-0 ${
+                      active ? "bg-[#1a0e14]" : "bg-transparent"
+                    }`}
+                  >
+                    <span className="relative shrink-0 size-[14px]">
+                      <img
+                        alt=""
+                        className="absolute block inset-0 max-w-none size-full"
+                        src={active ? b.on : b.off}
+                      />
+                    </span>
+                    <span
+                      className={`font-['Geist:Regular'] font-normal leading-[22px] text-[14px] whitespace-nowrap ${
+                        active ? "text-white" : "text-[#1a0e14]"
+                      }`}
+                    >
+                      {b.label}
+                    </span>
+                  </button>
+                )
+              })}
             </div>
+            <p className="font-['Geist:Regular'] font-normal leading-[22px] min-h-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap">
+              {view === "list" ? "Hover a row to preview" : ""}
+            </p>
           </div>
-          <div
-            className="h-[1098px] relative shrink-0 w-[1280px]"
-            data-node-id="236:4420"
-            data-name="Index stage"
-          >
-            <div
-              className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1280px]"
-              data-node-id="236:4421"
-              data-name="Index"
-            >
-              <div
-                className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                data-node-id="236:4422"
+        </div>
+
+        {/* Filters */}
+        <div className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal gap-[8px] items-start leading-[22px] pb-[40px] relative shrink-0 text-[14px] whitespace-nowrap">
+          {filters.map((f) => {
+            const active = filter === f.value
+            return (
+              <button
+                key={f.value}
+                type="button"
+                onClick={() => setFilter(f.value)}
+                className={`content-stretch flex cursor-pointer gap-[8px] items-center px-[14px] py-[7px] relative rounded-[999px] shrink-0 ${
+                  active ? "bg-[#f6dae5]" : "bg-transparent"
+                }`}
               >
-                <div
-                  className="bg-[#1a0e14] border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] h-[158px] items-center px-[20px] py-[26px] relative rounded-[16px] shrink-0 w-full"
-                  data-node-id="236:4423"
-                  data-name="Row/Vigil"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#f6dae5] text-[16px] w-[48px]"
-                    data-node-id="236:4424"
-                  >
-                    01
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Instrument_Serif:Italic'] italic leading-[0] min-w-px relative text-[#f8f4f2] text-[0px] tracking-[-2.4px]"
-                    data-node-id="236:4425"
-                  >
-                    <span className="font-['Geist:Medium'] font-medium leading-[56px] text-[52px]">{`Screen Mirroring - `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      Cast your phone to any TV
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#f8f4f2] text-[16px] w-[129px]"
-                    data-node-id="236:4426"
-                  >
-                    Mobile app · 2026
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[94px]"
-                    data-node-id="236:4427"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[20px] text-white tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4429"
-                  >
-                    ↗
-                  </p>
+                <span className={active ? "text-[#7a0d3b]" : "text-[#1a0e14]"}>{f.label}</span>
+                <span className="text-[#6e5b63]">{countOf(f.value)}</span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* GRID VIEW */}
+        {view === "grid" && (
+          <div className="grid grid-cols-2 gap-x-[32px] gap-y-[72px] relative shrink-0 w-full">
+            {visible.map((p) => (
+              <div
+                key={p.title}
+                className="content-stretch flex min-w-0 flex-col gap-[16px] items-start relative"
+                data-name={`Card/${p.title}`}
+              >
+                <div className="h-[440px] overflow-hidden relative rounded-[16px] shrink-0 w-full">
+                  {p.images.map((src) => (
+                    <img
+                      key={src}
+                      alt={p.title}
+                      className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                      src={src}
+                    />
+                  ))}
                 </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4430"
-                  data-name="Row/Screen Mirroring"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4431"
-                  >
-                    02
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4432"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`Vigil - `}</span>
-                    <span className="leading-[56px] text-[23px]">
-                      A Safety Command Platform
+                <div className="content-stretch flex items-center justify-between gap-[16px] relative shrink-0 w-full">
+                  <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] min-w-0 relative text-[#1a0e14] text-[0px] tracking-[-0.52px]">
+                    <span className="leading-[34px] text-[26px]">{`${p.title} - `}</span>
+                    <span className="font-['Geist:Regular'] font-normal leading-[34px] text-[#6e5b63] text-[16px] tracking-normal">
+                      {p.sub}
                     </span>
                   </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4433"
-                  >
-                    B2B SaaS · 2026
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4434"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
+                  <div className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[36px]">
+                    <div className="relative shrink-0 size-[14px]">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGo} />
+                    </div>
                   </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4436"
-                  >
-                    ↗
-                  </p>
                 </div>
+                {p.live ? (
+                  <a
+                    href={p.live.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px]"
+                  >
+                    {p.gridMeta}
+                    <span className="[text-underline-position:from-font] decoration-from-font decoration-solid text-[#167a43] underline">
+                      {p.live.gridLabel}
+                    </span>
+                  </a>
+                ) : (
+                  <p className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px]">
+                    {p.gridMeta}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* LIST VIEW (hover yahan hai) */}
+        {view === "list" && (
+          <div
+            className="content-stretch flex flex-col items-start shrink-0 w-full"
+            style={{ position: "relative", zIndex: 50, pointerEvents: "auto" }}
+            onMouseLeave={() => setHovered(null)}
+            onPointerLeave={() => setHovered(null)}
+          >
+            {visible.map((p, i) => {
+              const isHover = hovered === p.title
+              const on = () => setHovered(p.title)
+              return (
                 <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4437"
-                  data-name="Row/TaskFlow"
+                  key={p.title}
+                  onMouseEnter={on}
+                  onMouseMove={on}
+                  onPointerEnter={on}
+                  data-name={`Row/${p.title}`}
+                  className="flex shrink-0 items-center gap-[24px] rounded-[16px] px-[20px] py-[26px]"
+                  style={{
+                    position: "relative",
+                    width: "calc(100% + 40px)",
+                    marginLeft: -20,
+                    marginRight: -20,
+                    zIndex: isHover ? 20 : 0,
+                    pointerEvents: "auto",
+                    cursor: "pointer",
+                    backgroundColor: isHover ? DARK : "transparent",
+                    borderTop: `1px solid ${isHover ? "transparent" : LINE}`,
+                    transition: "background-color 200ms ease, border-color 200ms ease",
+                  }}
                 >
                   <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4438"
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px] w-[48px]"
+                    style={{ color: isHover ? PINK : MUTED, transition: "color 200ms ease" }}
                   >
-                    03
+                    {String(i + 1).padStart(2, "0")}
                   </p>
                   <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4439"
+                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[0px] tracking-[-2.08px]"
+                    style={{ color: isHover ? CREAM : DARK, transition: "color 200ms ease" }}
                   >
-                    <span className="leading-[56px] text-[52px]">{`TaskFlow `}</span>
-                    <span className="leading-[56px] text-[48px]">-</span>
-                    <span className="leading-[56px] text-[52px]">{` `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      Calm control for teams
-                    </span>
+                    <span className="leading-[56px] text-[52px]">{`${p.title} - `}</span>
+                    <span className="leading-[56px] text-[20px] tracking-normal">{p.sub}</span>
                   </p>
                   <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4440"
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px] whitespace-nowrap"
+                    style={{ color: isHover ? CREAM : MUTED, transition: "color 200ms ease" }}
                   >
-                    Dashboard · 2025
+                    {p.listMeta}
                   </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4441"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4443"
-                  >
-                    ↗
-                  </p>
-                </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4444"
-                  data-name="Row/AI Face Aging"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4445"
-                  >
-                    04
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="317:284"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`AI Face Aging - `}</span>
-                    <span className="leading-[56px] text-[20px]">
-                      See your future self
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4447"
-                  >
-                    Mobile app · AI · Year
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4448"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4450"
-                  >
-                    ↗
-                  </p>
-                </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4451"
-                  data-name="Row/Freelance Ops"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4452"
-                  >
-                    05
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4453"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`Freelance Ops `}</span>
-                    <span className="leading-[56px] text-[48px]">-</span>
-                    <span className="leading-[56px] text-[52px]">{` `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      Business tools for freelancers
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4454"
-                  >
-                    Mobile app · Fintech · Year
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4455"
-                    data-name="Status col"
-                  >
+
+                  {p.live ? (
                     <a
+                      href={p.live.href}
+                      target="_blank"
+                      rel="noreferrer"
                       className="bg-[#e5f5ec] content-stretch cursor-pointer flex gap-[8px] items-center px-[14px] py-[6px] relative rounded-[999px] shrink-0"
-                      href="https://play.google.com/store/apps/details?id=com.freelanceops&hl=en"
-                      data-node-id="236:4456"
-                      target="_blank"
-                      data-name="Link/Live on Play & App Store → https://play.google.com/store/apps/details?id=com.freelanceops&hl=en"
                     >
-                      <div
-                        className="relative shrink-0 size-[7px]"
-                        data-node-id="236:4457"
-                        data-name="Ellipse"
-                      >
+                      <span className="relative shrink-0 size-[7px]">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDotGreen} />
+                      </span>
+                      <span className="font-['Geist:Medium'] font-medium leading-[normal] text-[#167a43] text-[13px] whitespace-nowrap">
+                        {p.live.listLabel}
+                      </span>
+                    </a>
+                  ) : (
+                    <div
+                      className={`content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0 ${
+                        p.status === "Concept" ? "bg-white" : "bg-[#e5f5ec]"
+                      }`}
+                    >
+                      <span className="relative shrink-0 size-[7px]">
                         <img
                           alt=""
                           className="absolute block inset-0 max-w-none size-full"
-                          src={imgEllipse}
+                          src={p.status === "Concept" ? imgDotGrey : imgDotGreen}
                         />
-                      </div>
-                      <div
-                        className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] relative shrink-0 text-[#167a43] text-[13px] text-left whitespace-nowrap"
-                        data-node-id="236:4458"
-                        role="link"
-                        tabIndex={0}
+                      </span>
+                      <span
+                        className={`font-['Geist:Regular'] font-normal leading-[22px] text-[14px] whitespace-nowrap ${
+                          p.status === "Concept" ? "text-[#6e5b63]" : "text-[#1f9d57]"
+                        }`}
                       >
-                        <p className="cursor-pointer leading-[normal]">{`Live on Play & App Store ↗`}</p>
-                      </div>
-                    </a>
-                  </div>
+                        {p.status}
+                      </span>
+                    </div>
+                  )}
+
                   <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4459"
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[20px] tracking-[-0.2px] whitespace-nowrap"
+                    style={{ color: isHover ? "#ffffff" : DARK, transition: "color 200ms ease" }}
                   >
                     ↗
                   </p>
+
+                  <HoverPreview src={p.hoverImage} fallback={p.images[0]} show={isHover} />
                 </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4460"
-                  data-name="Row/TypeSnip"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4461"
-                  >
-                    06
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4462"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`TypeSnip `}</span>
-                    <span className="leading-[56px] text-[48px]">-</span>
-                    <span className="leading-[56px] text-[52px]">{` `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      A text-expander keyboard
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4463"
-                  >
-                    Mobile app · Productivity
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4464"
-                    data-name="Status col"
-                  >
-                    <a
-                      className="bg-[#e5f5ec] content-stretch cursor-pointer flex gap-[6px] items-center overflow-clip px-[10px] py-[4px] relative rounded-[999px] shrink-0"
-                      href="https://play.google.com/store/apps/details?id=com.asapp.keyboardExpanderApp&hl=en"
-                      data-node-id="236:4465"
-                      target="_blank"
-                      data-name="Link/Live on Google Play → https://play.google.com/store/apps/details?id=com.asapp.keyboardExpanderApp&hl=en"
-                    >
-                      <div
-                        className="relative shrink-0 size-[7px]"
-                        data-node-id="236:4466"
-                        data-name="Ellipse"
-                      >
-                        <img
-                          alt=""
-                          className="absolute block inset-0 max-w-none size-full"
-                          src={imgEllipse}
-                        />
-                      </div>
-                      <div
-                        className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] relative shrink-0 text-[#1f7a46] text-[12px] text-left whitespace-nowrap"
-                        data-node-id="236:4467"
-                        role="link"
-                        tabIndex={0}
-                      >
-                        <p className="cursor-pointer leading-[normal]">
-                          Live on Google Play ↗
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4468"
-                  >
-                    ↗
-                  </p>
-                </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4469"
-                  data-name="Row/Maisonette"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4470"
-                  >
-                    07
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4471"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`Maisonette `}</span>
-                    <span className="leading-[56px] text-[48px]">-</span>
-                    <span className="leading-[56px] text-[52px]">{` `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      Luxury estate command center
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4472"
-                  >
-                    SaaS · Real estate · Year
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4473"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4475"
-                  >
-                    ↗
-                  </p>
-                </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4476"
-                  data-name="Row/Inkspire Books"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4477"
-                  >
-                    08
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4478"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`Inkspire Books `}</span>
-                    <span className="leading-[56px] text-[48px]">{`- `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      Illustrated online bookstore
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4479"
-                  >
-                    Website · E-commerce · Year
-                  </p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4480"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4482"
-                  >
-                    ↗
-                  </p>
-                </div>
-                <div
-                  className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center py-[26px] relative shrink-0 w-full"
-                  data-node-id="236:4483"
-                  data-name="Row/Zorvex"
-                >
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[48px]"
-                    data-node-id="236:4484"
-                  >
-                    09
-                  </p>
-                  <p
-                    className="[word-break:break-word] flex-[1_0_0] font-['Geist:Medium'] font-medium leading-[0] min-w-px relative text-[#1a0e14] text-[0px] tracking-[-2.08px]"
-                    data-node-id="236:4485"
-                  >
-                    <span className="leading-[56px] text-[52px]">{`Zorvex `}</span>
-                    <span className="leading-[56px] text-[48px]">-</span>
-                    <span className="leading-[56px] text-[52px]">{` `}</span>
-                    <span className="font-['Geist:Regular'] font-normal leading-[56px] text-[23px]">
-                      AI-powered finance website
-                    </span>
-                  </p>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[#6e5b63] text-[16px] w-[240px]"
-                    data-node-id="236:4486"
-                  >{`Website · Fintech & AI · Year`}</p>
-                  <div
-                    className="content-stretch flex items-center relative shrink-0 w-[230px]"
-                    data-node-id="236:4487"
-                    data-name="Status col"
-                  >
-                    <StatusBadge className="bg-[#e5f5ec] content-stretch flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[999px] shrink-0" />
-                  </div>
-                  <p
-                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[20px] tracking-[-0.2px] whitespace-nowrap"
-                    data-node-id="236:4489"
-                  >
-                    ↗
-                  </p>
-                </div>
-              </div>
-              <div
-                className="bg-[#e7dadd] h-px relative shrink-0 w-full"
-                data-node-id="236:4490"
-                data-name="Rectangle"
-              />
+              )
+            })}
+            <div className="bg-[#e7dadd] h-px relative shrink-0 w-full" />
+          </div>
+        )}
+      </div>
+
+      {/* FOOTER */}
+      <div
+        className="bg-[#1a0e14] content-stretch flex flex-col gap-[90px] items-start pb-[80px] pt-[60px] px-[270px] relative shrink-0 w-full"
+        data-name="Footer (mine)"
+      >
+        <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[#f6dae5] text-[12px] tracking-[0.72px] uppercase whitespace-nowrap">
+          Got something in mind?
+        </p>
+        <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] text-white tracking-[-7px] whitespace-nowrap">
+          <span className="leading-[133px] text-[140px]">{`Let’s work `}</span>
+          <span className="font-['Instrument_Serif:Italic'] italic leading-[133px] text-[#f6dae5] text-[150px] tracking-[-3px]">
+            together.
+          </span>
+        </p>
+        <div className="content-stretch flex gap-[16px] items-center overflow-clip pt-[8px] relative shrink-0">
+          <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[60px] relative shrink-0 text-[56px] text-white tracking-[-1.68px] whitespace-nowrap">
+            kannyqb@gmail.com
+          </p>
+          <div className="bg-[rgba(255,255,255,0.08)] content-stretch flex flex-col items-center justify-center overflow-clip relative rounded-[999px] shrink-0 size-[44px]">
+            <div className="relative shrink-0 size-[18px]">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame4} />
             </div>
-            <div
-              className="absolute flex h-[220.543px] items-center justify-center left-[666px] top-[-34px] w-[300.468px]"
-              data-node-id="236:4491"
-            >
-              <div className="flex-none rotate-4">
-                <div
-                  className="h-[201.002px] relative rounded-[16px] shadow-[0px_20px_40px_0px_rgba(26,0,13,0.3)] w-[287.146px]"
-                  data-name="Hover preview (Vigil)"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full"
-                    src={imgHoverPreviewVigil}
-                  />
-                </div>
-              </div>
+          </div>
+          <div className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0">
+            <div className="relative shrink-0 size-[18px]">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame5} />
+            </div>
+            <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[15px] text-white whitespace-nowrap">
+              LinkedIn
+            </p>
+            <div className="relative shrink-0 size-[14px]">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame6} />
             </div>
           </div>
         </div>
-        <div
-          className="bg-[#121212] content-stretch flex flex-col gap-[40px] h-[743px] items-start pb-[40px] pt-[128px] px-[270px] relative shrink-0 w-full"
-          data-node-id="236:4492"
-          data-name="Footer (v2)"
-        >
-          <p
-            className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[#e3e6ff] text-[12px] tracking-[0.72px] uppercase whitespace-nowrap"
-            data-node-id="236:4493"
-          >
-            Got something in mind?
-          </p>
-          <p
-            className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] text-white tracking-[-7px] whitespace-nowrap"
-            data-node-id="236:4494"
-          >
-            <span className="leading-[132px] text-[140px]">{`Let’s work `}</span>
-            <span className="font-['Instrument_Serif:Italic'] italic leading-[96px] text-[#fbe3ec] text-[150px] tracking-[-3px]">
-              together.
-            </span>
-          </p>
-          <div
-            className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0"
-            data-node-id="236:4495"
-            data-name="Email row"
-          >
-            <p
-              className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[60px] relative shrink-0 text-[56px] text-white tracking-[-1.68px] whitespace-nowrap"
-              data-node-id="236:4496"
-            >
-              kannyqb@gmail.com
-            </p>
-            <div
-              className="bg-[rgba(255,255,255,0.08)] content-stretch flex flex-col items-center justify-center overflow-clip relative rounded-[999px] shrink-0 size-[44px]"
-              data-node-id="236:4497"
-              data-name="Copy email (icon)"
-            >
-              <div
-                className="relative shrink-0 size-[18px]"
-                data-node-id="236:4498"
-                data-name="Frame"
-              >
-                <img
-                  alt=""
-                  className="absolute block inset-0 max-w-none size-full"
-                  src={imgFrame2}
-                />
-              </div>
-            </div>
-            <div
-              className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0"
-              data-node-id="236:4501"
-              data-name="CTA/LinkedIn"
-            >
-              <div
-                className="relative shrink-0 size-[18px]"
-                data-node-id="236:4502"
-                data-name="Frame"
-              >
-                <img
-                  alt=""
-                  className="absolute block inset-0 max-w-none size-full"
-                  src={imgFrame3}
-                />
-              </div>
-              <p
-                className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[15px] text-white whitespace-nowrap"
-                data-node-id="236:4504"
-              >
-                LinkedIn
-              </p>
-              <div
-                className="relative shrink-0 size-[14px]"
-                data-node-id="236:4505"
-                data-name="Frame"
-              >
-                <img
-                  alt=""
-                  className="absolute block inset-0 max-w-none size-full"
-                  src={imgFrame4}
-                />
-              </div>
-            </div>
+        <div className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap">
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
+            <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">Based in</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Lahore — 14:30 PKT (GMT+5)</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Usually replies within 1 working day</p>
           </div>
-          <div
-            className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap"
-            data-node-id="236:4507"
-            data-name="Columns"
-          >
-            <div
-              className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-              data-node-id="236:4508"
-              data-name="Local time"
-            >
-              <p
-                className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-                data-node-id="236:4509"
-              >
-                Based in
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4510"
-              >
-                Lahore — 14:30 PKT (GMT+5)
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4511"
-              >
-                Usually replies within 1 working day
-              </p>
-            </div>
-            <div
-              className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-              data-node-id="236:4512"
-              data-name="Socials"
-            >
-              <p
-                className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-                data-node-id="236:4513"
-              >
-                Elsewhere
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4514"
-              >
-                Behance ↗
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4515"
-              >
-                Fiverr ↗
-              </p>
-            </div>
-            <div
-              className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-              data-node-id="236:4516"
-              data-name="More"
-            >
-              <p
-                className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-                data-node-id="236:4517"
-              >
-                More
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4518"
-              >
-                Resume (PDF) ↓
-              </p>
-              <p
-                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-                data-node-id="236:4519"
-              >
-                Privacy
-              </p>
-            </div>
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
+            <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">Elsewhere</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Behance ↗</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Fiverr ↗</p>
           </div>
-          <div
-            className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] text-white w-full whitespace-nowrap"
-            data-node-id="236:4520"
-            data-name="Bottom bar"
-          >
-            <p
-              className="relative shrink-0"
-              data-node-id="236:4521"
-            >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
-            <p className="relative shrink-0" data-node-id="236:4522">
-              Back to top ↑
-            </p>
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
+            <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">More</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Resume (PDF) ↓</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Privacy</p>
           </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] text-white w-full whitespace-nowrap">
+          <p className="relative shrink-0">© 2026 Kanza Iqbal · Designed & built with care in Lahore</p>
+          <p className="relative shrink-0">Back to top ↑</p>
         </div>
       </div>
     </div>

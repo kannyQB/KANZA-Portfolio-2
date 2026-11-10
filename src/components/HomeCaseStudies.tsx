@@ -144,7 +144,7 @@ const caseStudies = [
     outcome:
       "Delivered a shipped SaaS experience for luxury real-estate operations.",
 
-    href: "/work",
+    href: "/work/maisonette",
   },
 
   {
@@ -179,7 +179,7 @@ const caseStudies = [
 
     outcome: "Shipped as a mobile app and published on Google Play.",
 
-    href: "/work",
+    href: "/work/freelance-ops",
   },
 
   {
