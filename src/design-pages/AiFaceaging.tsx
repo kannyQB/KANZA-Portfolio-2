@@ -1319,6 +1319,8 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             </div>
           </div>
         </div>
+
+        {/* ===== HOME (annotations: font size + spacing barha di) ===== */}
         <div
           className="content-stretch flex gap-[80px] items-start relative shrink-0 w-full"
           data-node-id="438:5458"
@@ -1342,7 +1344,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               One hero action, every tool one tap away.
             </p>
             <div
-              className="bg-[#dce7f8] content-stretch flex gap-[56px] items-center px-[48px] py-[40px] relative rounded-[24px] shrink-0 w-full"
+              className="bg-[#dce7f8] content-stretch flex gap-[64px] items-center px-[56px] py-[48px] relative rounded-[24px] shrink-0 w-full"
               data-node-id="438:5462"
               data-name="Annotated Home"
             >
@@ -1358,40 +1360,40 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 />
               </div>
               <div
-                className="content-stretch flex flex-[1_0_0] flex-col gap-[20px] items-start min-w-px relative"
+                className="content-stretch flex flex-[1_0_0] flex-col gap-[36px] items-start justify-center min-w-px relative"
                 data-node-id="438:5464"
                 data-name="Annotations"
               >
                 <div
-                  className="content-stretch flex gap-[14px] items-start relative shrink-0 w-full"
+                  className="content-stretch flex gap-[18px] items-start relative shrink-0 w-full"
                   data-node-id="438:5465"
                   data-name="Connection bar"
                 >
                   <div
-                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[28px]"
+                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[36px]"
                     data-node-id="438:5466"
                     data-name="n"
                   >
                     <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap"
+                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[16px] text-white whitespace-nowrap"
                       data-node-id="438:5467"
                     >
                       1
                     </p>
                   </div>
                   <div
-                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative"
+                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative"
                     data-node-id="438:5468"
                     data-name="t"
                   >
                     <p
-                      className="font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#1a0e14] text-[18px] whitespace-nowrap"
+                      className="font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.22px]"
                       data-node-id="438:5469"
                     >
                       “See my Future” hero card
                     </p>
                     <p
-                      className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[#6e5b63] text-[15px] w-[min-content]"
+                      className="font-['Geist:Regular'] font-normal leading-[28px] min-w-full relative shrink-0 text-[#6e5b63] text-[18px] w-[min-content]"
                       data-node-id="438:5470"
                     >
                       The reason people install the app leads every session.
@@ -1399,35 +1401,35 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   </div>
                 </div>
                 <div
-                  className="content-stretch flex gap-[14px] items-start relative shrink-0 w-full"
+                  className="content-stretch flex gap-[18px] items-start relative shrink-0 w-full"
                   data-node-id="438:5471"
                   data-name="One hero tool"
                 >
                   <div
-                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[28px]"
+                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[36px]"
                     data-node-id="438:5472"
                     data-name="n"
                   >
                     <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap"
+                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[16px] text-white whitespace-nowrap"
                       data-node-id="438:5473"
                     >
                       2
                     </p>
                   </div>
                   <div
-                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative"
+                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative"
                     data-node-id="438:5474"
                     data-name="t"
                   >
                     <p
-                      className="font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#1a0e14] text-[18px] whitespace-nowrap"
+                      className="font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.22px]"
                       data-node-id="438:5475"
                     >
                       Trending AI styles
                     </p>
                     <p
-                      className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[#6e5b63] text-[15px] w-[min-content]"
+                      className="font-['Geist:Regular'] font-normal leading-[28px] min-w-full relative shrink-0 text-[#6e5b63] text-[18px] w-[min-content]"
                       data-node-id="438:5476"
                     >
                       Ghibli, royal, 3D cartoon and luxury looks, one tap from Home.
@@ -1435,35 +1437,35 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   </div>
                 </div>
                 <div
-                  className="content-stretch flex gap-[14px] items-start relative shrink-0 w-full"
+                  className="content-stretch flex gap-[18px] items-start relative shrink-0 w-full"
                   data-node-id="438:5477"
                   data-name="Two supporting tools"
                 >
                   <div
-                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[28px]"
+                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[36px]"
                     data-node-id="438:5478"
                     data-name="n"
                   >
                     <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap"
+                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[16px] text-white whitespace-nowrap"
                       data-node-id="438:5479"
                     >
                       3
                     </p>
                   </div>
                   <div
-                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative"
+                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative"
                     data-node-id="438:5480"
                     data-name="t"
                   >
                     <p
-                      className="font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#1a0e14] text-[18px] whitespace-nowrap"
+                      className="font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.22px]"
                       data-node-id="438:5481"
                     >
                       Tools hub
                     </p>
                     <p
-                      className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[#6e5b63] text-[15px] w-[min-content]"
+                      className="font-['Geist:Regular'] font-normal leading-[28px] min-w-full relative shrink-0 text-[#6e5b63] text-[18px] w-[min-content]"
                       data-node-id="438:5482"
                     >
                       Every other feature lives in one browsable grid in the Tools tab.
@@ -1471,35 +1473,35 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   </div>
                 </div>
                 <div
-                  className="content-stretch flex gap-[14px] items-start relative shrink-0 w-full"
+                  className="content-stretch flex gap-[18px] items-start relative shrink-0 w-full"
                   data-node-id="438:5483"
                   data-name="Shortcuts"
                 >
                   <div
-                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[28px]"
+                    className="bg-[#7a0d3b] content-stretch flex flex-col items-center justify-center relative rounded-[999px] shrink-0 size-[36px]"
                     data-node-id="438:5484"
                     data-name="n"
                   >
                     <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap"
+                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[16px] text-white whitespace-nowrap"
                       data-node-id="438:5485"
                     >
                       4
                     </p>
                   </div>
                   <div
-                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative"
+                    className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative"
                     data-node-id="438:5486"
                     data-name="t"
                   >
                     <p
-                      className="font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#1a0e14] text-[18px] whitespace-nowrap"
+                      className="font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.22px]"
                       data-node-id="438:5487"
                     >
                       Floating bottom nav
                     </p>
                     <p
-                      className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[#6e5b63] text-[15px] w-[min-content]"
+                      className="font-['Geist:Regular'] font-normal leading-[28px] min-w-full relative shrink-0 text-[#6e5b63] text-[18px] w-[min-content]"
                       data-node-id="438:5488"
                     >
                       Four tabs, always in thumb reach.
@@ -1533,7 +1535,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               after={imgRectangle3}
             />
             <div
-              className="hidden grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
+              className="hidden"
               data-node-id="455:473"
             >
               <div
@@ -1630,6 +1632,8 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             </p>
           </div>
         </div>
+
+        {/* ===== STATES (cards ab flex row mein, barabar spacing) ===== */}
         <div
           className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full"
           data-node-id="438:5504"
@@ -1653,220 +1657,195 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               No silent waits: every AI moment tells people what’s happening.
             </p>
             <div
-              className="h-[590px] relative shrink-0 w-full"
+              className="flex items-start justify-between gap-[16px] pt-[24px] pb-[40px] relative shrink-0 w-full"
               data-node-id="438:5508"
               data-name="States — pastel cards"
             >
-              <div
-                className="absolute flex h-[514.769px] items-center justify-center left-0 top-[10px] w-[275.95px]"
-                data-node-id="438:5509"
-              >
-                <div className="flex-none rotate-3">
+              <div className="flex-none rotate-3" data-node-id="438:5509">
+                <div
+                  className="bg-[#dfe7fb] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
+                  data-name="State/Generating…"
+                >
                   <div
-                    className="bg-[#dfe7fb] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
-                    data-name="State/Generating…"
+                    className="flex h-[416.373px] items-center justify-center relative shrink-0 w-[196.793px]"
+                    data-node-id="455:486"
                   >
-                    <div
-                      className="flex h-[416.373px] items-center justify-center relative shrink-0 w-[196.793px]"
-                      data-node-id="455:486"
-                    >
-                      <div className="flex-none rotate-[0.11deg]">
-                        <div
-                          className="h-[416px] relative w-[196px]"
-                          data-name="iMockup - Google Pixel 8 Pro"
-                        >
+                    <div className="flex-none rotate-[0.11deg]">
+                      <div
+                        className="h-[416px] relative w-[196px]"
+                        data-name="iMockup - Google Pixel 8 Pro"
+                      >
+                        <img
+                          alt=""
+                          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                          src={imgIMockupGooglePixel8Pro5}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
+                    data-node-id="438:5511"
+                  >
+                    Generating…
+                  </p>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
+                    data-node-id="438:5512"
+                  >
+                    An honest wait, not a spinner
+                  </p>
+                </div>
+              </div>
+              <div className="-rotate-2 flex-none" data-node-id="438:5513">
+                <div
+                  className="bg-[#d7f0e6] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
+                  data-name="State/Your future self"
+                >
+                  <div
+                    className="flex h-[417.605px] items-center justify-center relative shrink-0 w-[199.429px]"
+                    data-node-id="455:496"
+                  >
+                    <div className="flex-none rotate-[0.47deg]">
+                      <div
+                        className="h-[416px] relative w-[196px]"
+                        data-name="iMockup - Google Pixel 8 Pro"
+                      >
+                        <div aria-hidden className="absolute inset-0 pointer-events-none">
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                            src={imgIMockupGooglePixel8Pro5}
+                            className="absolute max-w-none object-cover size-full"
+                            src={imgIMockupGooglePixel8Pro6}
+                          />
+                          <img
+                            alt=""
+                            className="absolute max-w-none object-cover size-full"
+                            src={imgIMockupGooglePixel8Pro7}
                           />
                         </div>
                       </div>
                     </div>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
-                      data-node-id="438:5511"
-                    >
-                      Generating…
-                    </p>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
-                      data-node-id="438:5512"
-                    >
-                      An honest wait, not a spinner
-                    </p>
                   </div>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
+                    data-node-id="438:5515"
+                  >
+                    Save
+                  </p>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
+                    data-node-id="438:5516"
+                  >
+                    Share in one tap
+                  </p>
                 </div>
               </div>
-              <div
-                className="absolute flex h-[512.023px] items-center justify-center left-[259px] top-[21.28px] w-[267.423px]"
-                data-node-id="438:5513"
-              >
-                <div className="-rotate-2 flex-none">
+              <div className="flex-none rotate-[3.36deg]" data-node-id="438:5517">
+                <div
+                  className="bg-[#fbe2d2] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
+                  data-name="State/Didn’t work"
+                >
                   <div
-                    className="bg-[#d7f0e6] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
-                    data-name="State/Your future self"
+                    className="flex h-[419.344px] items-center justify-center relative shrink-0 w-[203.202px]"
+                    data-node-id="455:488"
                   >
-                    <div
-                      className="flex h-[417.605px] items-center justify-center relative shrink-0 w-[199.429px]"
-                      data-node-id="455:496"
-                    >
-                      <div className="flex-none rotate-[0.47deg]">
-                        <div
-                          className="h-[416px] relative w-[196px]"
-                          data-name="iMockup - Google Pixel 8 Pro"
-                        >
-                          <div aria-hidden className="absolute inset-0 pointer-events-none">
-                            <img
-                              alt=""
-                              className="absolute max-w-none object-cover size-full"
-                              src={imgIMockupGooglePixel8Pro6}
-                            />
-                            <img
-                              alt=""
-                              className="absolute max-w-none object-cover size-full"
-                              src={imgIMockupGooglePixel8Pro7}
-                            />
-                          </div>
-                        </div>
+                    <div className="flex-none rotate-1">
+                      <div
+                        className="h-[416px] relative w-[196px]"
+                        data-name="iMockup - Google Pixel 8 Pro"
+                      >
+                        <img
+                          alt=""
+                          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                          src={imgIMockupGooglePixel8Pro12}
+                        />
                       </div>
                     </div>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
-                      data-node-id="438:5515"
-                    >
-                      Save
-                    </p>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
-                      data-node-id="438:5516"
-                    >
-                      Share in one tap
-                    </p>
                   </div>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
+                    data-node-id="438:5519"
+                  >
+                    Generation Failed
+                  </p>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
+                    data-node-id="438:5520"
+                  >
+                    Credit returned · Try again
+                  </p>
                 </div>
               </div>
-              <div
-                className="absolute flex h-[519.133px] items-center justify-center left-[496px] top-[14px] w-[279.2px]"
-                data-node-id="438:5517"
-              >
-                <div className="flex-none rotate-[3.36deg]">
+              <div className="-rotate-3 flex-none" data-node-id="438:5521">
+                <div
+                  className="bg-[#e8defa] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
+                  data-name="State/Go Pro"
+                >
                   <div
-                    className="bg-[#fbe2d2] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
-                    data-name="State/Didn’t work"
+                    className="flex h-[419.93px] items-center justify-center relative shrink-0 w-[204.486px]"
+                    data-node-id="455:489"
                   >
-                    <div
-                      className="flex h-[419.344px] items-center justify-center relative shrink-0 w-[203.202px]"
-                      data-node-id="455:488"
-                    >
-                      <div className="flex-none rotate-1">
-                        <div
-                          className="h-[416px] relative w-[196px]"
-                          data-name="iMockup - Google Pixel 8 Pro"
-                        >
-                          <img
-                            alt=""
-                            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                            src={imgIMockupGooglePixel8Pro12}
-                          />
-                        </div>
+                    <div className="flex-none rotate-[-1.17deg]">
+                      <div
+                        className="h-[416px] relative w-[196px]"
+                        data-name="iMockup - Google Pixel 8 Pro"
+                      >
+                        <img
+                          alt=""
+                          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                          src={imgIMockupGooglePixel8Pro13}
+                        />
                       </div>
                     </div>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
-                      data-node-id="438:5519"
-                    >
-                      Generation Failed
-                    </p>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
-                      data-node-id="438:5520"
-                    >
-                      Credit returned · Try again
-                    </p>
                   </div>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
+                    data-node-id="438:5523"
+                  >
+                    Go Pro
+                  </p>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
+                    data-node-id="438:5524"
+                  >
+                    Trial and renewal shown up front
+                  </p>
                 </div>
               </div>
-              <div
-                className="absolute flex h-[518.321px] items-center justify-center left-[754px] top-[11px] w-[276.136px]"
-                data-node-id="438:5521"
-              >
-                <div className="-rotate-3 flex-none">
+              <div className="flex-none rotate-2" data-node-id="438:5525">
+                <div
+                  className="bg-[#f6dae5] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
+                  data-name="State/Saved in HD"
+                >
                   <div
-                    className="bg-[#e8defa] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
-                    data-name="State/Go Pro"
+                    className="flex h-[416.603px] items-center justify-center relative shrink-0 w-[197.283px]"
+                    data-node-id="455:494"
                   >
-                    <div
-                      className="flex h-[419.93px] items-center justify-center relative shrink-0 w-[204.486px]"
-                      data-node-id="455:489"
-                    >
-                      <div className="flex-none rotate-[-1.17deg]">
-                        <div
-                          className="h-[416px] relative w-[196px]"
-                          data-name="iMockup - Google Pixel 8 Pro"
-                        >
-                          <img
-                            alt=""
-                            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                            src={imgIMockupGooglePixel8Pro13}
-                          />
-                        </div>
+                    <div className="flex-none rotate-[0.18deg]">
+                      <div
+                        className="h-[416px] relative w-[196px]"
+                        data-name="iMockup - Google Pixel 8 Pro"
+                      >
+                        <img
+                          alt=""
+                          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                          src={imgIMockupGooglePixel8Pro14}
+                        />
                       </div>
                     </div>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
-                      data-node-id="438:5523"
-                    >
-                      Go Pro
-                    </p>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
-                      data-node-id="438:5524"
-                    >
-                      Trial and renewal shown up front
-                    </p>
                   </div>
-                </div>
-              </div>
-              <div
-                className="absolute flex h-[511.021px] items-center justify-center left-[1011.5px] top-[10px] w-[267.388px]"
-                data-node-id="438:5525"
-              >
-                <div className="flex-none rotate-2">
-                  <div
-                    className="bg-[#f6dae5] content-stretch flex flex-col items-center pb-[22px] pt-[24px] px-[27px] relative rounded-[28px] w-[250px]"
-                    data-name="State/Saved in HD"
+                  <p
+                    className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
+                    data-node-id="438:5527"
                   >
-                    <div
-                      className="flex h-[416.603px] items-center justify-center relative shrink-0 w-[197.283px]"
-                      data-node-id="455:494"
-                    >
-                      <div className="flex-none rotate-[0.18deg]">
-                        <div
-                          className="h-[416px] relative w-[196px]"
-                          data-name="iMockup - Google Pixel 8 Pro"
-                        >
-                          <img
-                            alt=""
-                            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                            src={imgIMockupGooglePixel8Pro14}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[22px] min-w-full relative shrink-0 text-[#1a0e14] text-[17px] text-center w-[min-content]"
-                      data-node-id="438:5527"
-                    >
-                      Delete
-                    </p>
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
-                      data-node-id="438:5528"
-                    >
-                      All changes will be discarded
-                    </p>
-                  </div>
+                    Delete
+                  </p>
+                  <p
+                    className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[18px] min-w-full relative shrink-0 text-[#6e5b63] text-[13px] text-center w-[min-content]"
+                    data-node-id="438:5528"
+                  >
+                    All changes will be discarded
+                  </p>
                 </div>
               </div>
             </div>
@@ -2123,7 +2102,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
                   data-node-id="438:5551"
                 >
-                  ✓ Contrast checked on violet buttons (WCAG 2.1 AA) [Confirm]
+                  ✓ Contrast checked on violet buttons (WCAG 2.1 AA) 
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
@@ -2147,13 +2126,13 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
                   data-node-id="438:5555"
                 >
-                  ✓ Clear consent before uploading a face photo [Confirm]
+                  ✓ Clear consent before uploading a face photo
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
                   data-node-id="438:5556"
                 >
-                  ✓ Photos used only to create your result [Confirm]
+                  ✓ Photos used only to create your result 
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"

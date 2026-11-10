@@ -1540,7 +1540,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
               after={imgRectangle2}
             />
             <div
-              className="hidden grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
+              className="hidden"
               data-node-id="476:6406"
             >
               <div
