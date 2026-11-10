@@ -1650,7 +1650,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
               Every visit leaves a trail: due, done, checked and approved.
             </p>
             <div
-              className="h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[7px] h-[590px] relative shrink-0 w-full"
               data-node-id="438:6598"
               data-name="States — pastel cards"
             >

@@ -1640,7 +1640,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
               Every entry tells you where your money stands.
             </p>
             <div
-              className="h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[7px] h-[590px] relative shrink-0 w-full"
               data-node-id="438:5872"
               data-name="States — pastel cards"
             >
