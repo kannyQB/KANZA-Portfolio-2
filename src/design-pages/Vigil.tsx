@@ -1,8 +1,10 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets"
 const imgCover = `${assetPathPrefix}/1da72.png`
 const imgImage2 = `${assetPathPrefix}/d1878.png`
+const imgTaskFlow = `${assetPathPrefix}/5fbd8.png`
 const imgWireframeHalf1 = `${assetPathPrefix}/976ff.png`
 const imgScreenPasteDashboardLiveFeed = `${assetPathPrefix}/2d025.png`
 const imgScreenPasteAlertDetailActions = `${assetPathPrefix}/2df2e.png`
@@ -116,23 +118,23 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
         data-name="Cover + title card"
       >
         <div
-          className="h-[760px] overflow-clip relative rounded-[32px] shrink-0 w-[1392px]"
+          className="h-[860px] overflow-clip relative rounded-[32px] shrink-0 w-full"
           data-node-id="346:1170"
           data-name="Cover"
         >
           <img
             alt=""
-            className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[32px] size-full"
+            className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-[32px] size-full"
             src={imgCover}
           />
           <div
-            className="-translate-x-1/2 -translate-y-1/2 absolute h-[803px] left-[calc(50%+0.5px)] top-[calc(50%+0.5px)] w-[1405px]"
+            className="absolute inset-0 h-full w-full"
             data-node-id="346:1171"
             data-name="image 2"
           >
             <img
               alt=""
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+              className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full scale-x-[0.94] scale-y-[1.12]"
               src={imgImage2}
             />
           </div>
@@ -1558,15 +1560,19 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
             data-name="c"
           >
             <div
-              className="bg-[#f1e8e9] content-stretch flex gap-[24px] items-center p-[40px] relative rounded-[24px] shrink-0 w-full"
+              className="bg-[#f1e8e9] content-stretch flex gap-[16px] items-center p-[12px] relative rounded-[24px] shrink-0 w-full max-[900px]:flex-col"
               data-node-id="346:1410"
               data-name="Mockups stage"
             >
               <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
-                data-node-id="346:1411"
-                data-name="Browser mockup — Dashboard — live feed"
+                className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-stretch min-w-px max-[900px]:w-full"
+                data-name="Desktop screens"
               >
+                <div
+                  className="bg-white content-stretch flex flex-col h-[400px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)] shrink-0 w-full"
+                  data-node-id="346:1411"
+                  data-name="Browser mockup — Dashboard — live feed"
+                >
                 <div
                   className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
                   data-node-id="346:1412"
@@ -1619,7 +1625,7 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
                   </div>
                 </div>
                 <div
-                  className="h-[227px] relative shrink-0 w-full"
+                  className="h-[357px] relative shrink-0 w-full"
                   data-node-id="346:1418"
                   data-name="Screen — paste Dashboard — live feed"
                 >
@@ -1630,11 +1636,11 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
                   />
                 </div>
               </div>
-              <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[270px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
-                data-node-id="346:1419"
-                data-name="Browser mockup — Alert detail & actions"
-              >
+                <div
+                  className="hidden"
+                  data-node-id="346:1419"
+                  data-name="Browser mockup — Alert detail & actions"
+                >
                 <div
                   className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
                   data-node-id="346:1420"
@@ -1698,8 +1704,9 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
                   />
                 </div>
               </div>
+              </div>
               <div
-                className="bg-[#14161a] h-[400px] overflow-clip relative rounded-[30px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.16)] shrink-0 w-[190px]"
+                className="bg-[#14161a] h-[400px] overflow-clip relative rounded-[30px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.16)] shrink-0 w-[190px] max-[900px]:self-center"
                 data-node-id="346:1427"
                 data-name="Phone mockup — Mobile companion"
               >
@@ -2159,8 +2166,9 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
         data-node-id="346:1499"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[40px] relative shrink-0 w-full"
+        <Link
+          href="/work/taskflow"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[40px] relative shrink-0 w-full"
           data-node-id="346:1500"
           data-name="Next case study"
         >
@@ -2189,16 +2197,15 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
             </p>
           </div>
           <div
-            className="bg-[#f1e8e9] h-[170px] overflow-clip relative rounded-[16px] shrink-0 w-[260px]"
+            className="h-[170px] overflow-clip relative rounded-[16px] shrink-0 w-[260px]"
             data-node-id="346:1505"
             data-name="TaskFlow"
           >
-            <p
-              className="[word-break:break-word] absolute font-['Geist:Regular'] font-normal leading-[normal] left-[102px] text-[#6e5b63] text-[13px] top-[77px] whitespace-nowrap"
-              data-node-id="346:1506"
-            >
-              TaskFlow
-            </p>
+            <img
+              alt=""
+              className="absolute inset-0 max-w-none object-cover size-full"
+              src={imgTaskFlow}
+            />
           </div>
           <p
             className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[48px] whitespace-nowrap"
@@ -2206,7 +2213,7 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] relative shrink-0 w-full"

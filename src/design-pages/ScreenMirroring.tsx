@@ -1,4 +1,5 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets"
 const imgCover = `${assetPathPrefix}/e579c.png`
@@ -18,7 +19,7 @@ const imgIMockupGooglePixel8Pro10 = `${assetPathPrefix}/181f8.png`
 const imgIMockupGooglePixel8Pro11 = `${assetPathPrefix}/8ffc7.png`
 const imgIMockupGooglePixel8Pro12 = `${assetPathPrefix}/a0d2b.png`
 const imgIMockupGooglePixel8Pro13 = `${assetPathPrefix}/509ef.png`
-const imgTaskFlow = `${assetPathPrefix}/d1878.png`
+const imgVigil = `${assetPathPrefix}/1da72.png`
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgEllipse = `${assetPathPrefix}/2323f.svg`
 const imgStepDot = `${assetPathPrefix}/88ca7.svg`
@@ -1631,12 +1632,12 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
               No dead ends: every state tells people what to do next.
             </p>
             <div
-              className="h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[20px] h-[590px] relative shrink-0 w-full"
               data-node-id="346:1027"
               data-name="States — pastel cards"
             >
               <div
-                className="absolute flex h-[516.049px] items-center justify-center left-0 top-[10px] w-[276.017px]"
+                className="flex h-[516.049px] items-center justify-center mt-[10px] shrink-0 w-[276.017px]"
                 data-node-id="346:1028"
               >
                 <div className="flex-none rotate-3">
@@ -1677,7 +1678,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[513.8px] items-center justify-center left-[259px] top-[21.28px] w-[267.485px]"
+                className="flex h-[513.8px] items-center justify-center mt-[21.28px] shrink-0 w-[267.485px]"
                 data-node-id="346:1032"
               >
                 <div className="-rotate-2 flex-none">
@@ -1718,7 +1719,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[520.752px] items-center justify-center left-[496px] top-[14px] w-[279.295px]"
+                className="flex h-[520.752px] items-center justify-center mt-[14px] shrink-0 w-[279.295px]"
                 data-node-id="346:1036"
               >
                 <div className="flex-none rotate-[3.36deg]">
@@ -1759,7 +1760,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[514.831px] items-center justify-center left-[754px] top-[11px] w-[275.953px]"
+                className="flex h-[514.831px] items-center justify-center mt-[11px] shrink-0 w-[275.953px]"
                 data-node-id="346:1040"
               >
                 <div className="-rotate-3 flex-none">
@@ -1800,7 +1801,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[512.996px] items-center justify-center left-[1011.5px] top-[10px] w-[267.457px]"
+                className="flex h-[512.996px] items-center justify-center mt-[10px] shrink-0 w-[267.457px]"
                 data-node-id="346:1044"
               >
                 <div className="flex-none rotate-2">
@@ -2341,8 +2342,9 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
         data-node-id="346:1128"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
+        <Link
+          href="/work/vigil"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
           data-node-id="346:1129"
           data-name="Next case study"
         >
@@ -2383,7 +2385,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
               <img
                 alt=""
                 className="absolute max-w-none object-cover rounded-[16px] size-full"
-                src={imgTaskFlow}
+                src={imgVigil}
               />
             </div>
           </div>
@@ -2393,7 +2395,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] relative shrink-0 w-full"

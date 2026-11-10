@@ -1,7 +1,9 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets"
 const imgCover = `${assetPathPrefix}/5fbd8.png`
+const imgAiFaceAging = `${assetPathPrefix}/b9991.png`
 const imgTaskFlowFinal = `${assetPathPrefix}/f0670.png`
 const imgTaskFlowWireframe = `${assetPathPrefix}/31aef.png`
 const imgScreenPasteBoardKanban = `${assetPathPrefix}/60420.png`
@@ -119,13 +121,13 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
         data-name="Cover + title card"
       >
         <div
-          className="h-[760px] overflow-clip relative rounded-[32px] shrink-0 w-[1392px]"
+          className="h-[760px] overflow-clip relative rounded-[32px] shrink-0 w-full"
           data-node-id="334:8687"
           data-name="Cover"
         >
           <img
             alt=""
-            className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[32px] size-full"
+            className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-[32px] size-full"
             src={imgCover}
           />
           <div
@@ -1566,12 +1568,12 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
             data-name="c"
           >
             <div
-              className="bg-[#f1e8e9] content-stretch flex gap-[24px] items-center p-[40px] relative rounded-[24px] shrink-0 w-full"
+              className="bg-[#f1e8e9] content-stretch flex gap-[16px] items-center p-[12px] relative rounded-[24px] shrink-0 w-full"
               data-node-id="334:8937"
               data-name="Mockups stage"
             >
               <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
+                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[380px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
                 data-node-id="334:8938"
                 data-name="Browser mockup — Board (Kanban)"
               >
@@ -1627,7 +1629,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                   </div>
                 </div>
                 <div
-                  className="h-[196px] relative shrink-0 w-full"
+                  className="h-[336px] relative shrink-0 w-full"
                   data-node-id="334:8945"
                   data-name="Screen — paste Board (Kanban)"
                 >
@@ -1639,7 +1641,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                 </div>
               </div>
               <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[240px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
+                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[380px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
                 data-node-id="334:8946"
                 data-name="Browser mockup — Reports"
               >
@@ -1695,7 +1697,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                   </div>
                 </div>
                 <div
-                  className="h-[196px] relative shrink-0 w-full"
+                  className="h-[336px] relative shrink-0 w-full"
                   data-node-id="334:8953"
                   data-name="Screen — paste Reports"
                 >
@@ -1707,7 +1709,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                 </div>
               </div>
               <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
+                className="hidden"
                 data-node-id="334:8954"
                 data-name="Browser mockup — Task details"
               >
@@ -2208,8 +2210,9 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
         data-node-id="334:9031"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[40px] relative shrink-0 w-full"
+        <Link
+          href="/work/ai-face-aging"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[40px] relative shrink-0 w-full"
           data-node-id="334:9032"
           data-name="Next case study"
         >
@@ -2250,7 +2253,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               <img
                 alt=""
                 className="absolute max-w-none object-cover rounded-[16px] size-full"
-                src={imgTaskFlow}
+                src={imgAiFaceAging}
               />
             </div>
           </div>
@@ -2260,7 +2263,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] relative shrink-0 w-full"

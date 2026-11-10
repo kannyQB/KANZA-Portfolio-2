@@ -1,4 +1,5 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets";
 const imgPasteCoverPhone = `${assetPathPrefix}/7c588.png`;
@@ -1640,12 +1641,12 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
               Every entry tells you where your money stands.
             </p>
             <div
-              className="flex items-start gap-[7px] h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[20px] h-[590px] relative shrink-0 w-full"
               data-node-id="438:5872"
               data-name="States — pastel cards"
             >
               <div
-                className="absolute flex h-[515.778px] items-center justify-center left-0 top-[10px] w-[276.002px]"
+                className="flex h-[515.778px] items-center justify-center mt-[10px] shrink-0 w-[276.002px]"
                 data-node-id="438:5873"
               >
                 <div className="flex-none rotate-3">
@@ -1686,7 +1687,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[513.27px] items-center justify-center left-[259px] top-[21.28px] w-[267.467px]"
+                className="flex h-[513.27px] items-center justify-center mt-[21.28px] shrink-0 w-[267.467px]"
                 data-node-id="438:5877"
               >
                 <div className="-rotate-2 flex-none">
@@ -1727,7 +1728,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[515.997px] items-center justify-center left-[496px] top-[14px] w-[279.016px]"
+                className="flex h-[515.997px] items-center justify-center mt-[14px] shrink-0 w-[279.016px]"
                 data-node-id="438:5881"
               >
                 <div className="flex-none rotate-[3.36deg]">
@@ -1768,7 +1769,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[514.48px] items-center justify-center left-[754px] top-[11px] w-[275.934px]"
+                className="flex h-[514.48px] items-center justify-center mt-[11px] shrink-0 w-[275.934px]"
                 data-node-id="438:5885"
               >
                 <div className="-rotate-3 flex-none">
@@ -1803,7 +1804,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[511.295px] items-center justify-center left-[1011.5px] top-[10px] w-[267.398px]"
+                className="flex h-[511.295px] items-center justify-center mt-[10px] shrink-0 w-[267.398px]"
                 data-node-id="438:5889"
               >
                 <div className="flex-none rotate-2">
@@ -2218,8 +2219,9 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
         data-node-id="438:5953"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
+        <Link
+          href="/work/maisonette"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
           data-node-id="438:5954"
           data-name="Next case study"
         >
@@ -2264,7 +2266,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] max-[1100px]:px-[clamp(24px,5vw,56px)] relative shrink-0 w-full"

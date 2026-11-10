@@ -1,4 +1,5 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets";
 const imgPasteCoverPhone = `${assetPathPrefix}/bdf25.png`;
@@ -20,7 +21,7 @@ const imgIMockupGooglePixel8Pro12 = `${assetPathPrefix}/bbb4f.png`;
 const imgIMockupGooglePixel8Pro13 = `${assetPathPrefix}/678e2.png`;
 const imgIMockupGooglePixel8Pro14 = `${assetPathPrefix}/8d86e.png`;
 const imgIMockupGooglePixel8Pro15 = `${assetPathPrefix}/1ba5d.png`;
-const imgPasteZorvexThumbnail = `${assetPathPrefix}/39efb.png`;
+const imgScreenMirroring = `${assetPathPrefix}/39efb.png`;
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`;
 const imgEllipse = `${assetPathPrefix}/2323f.svg`;
 const imgStepDot = `${assetPathPrefix}/eee70.svg`;
@@ -1650,12 +1651,12 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
               Every visit leaves a trail: due, done, checked and approved.
             </p>
             <div
-              className="flex items-start gap-[7px] h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[20px] h-[590px] relative shrink-0 w-full"
               data-node-id="438:6598"
               data-name="States — pastel cards"
             >
               <div
-                className="absolute flex h-[516.777px] items-center justify-center left-0 top-[10px] w-[276.055px]"
+                className="flex h-[516.777px] items-center justify-center mt-[10px] shrink-0 w-[276.055px]"
                 data-node-id="438:6599"
               >
                 <div className="flex-none rotate-3">
@@ -1696,7 +1697,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[511.429px] items-center justify-center left-[259px] top-[21.28px] w-[267.403px]"
+                className="flex h-[511.429px] items-center justify-center mt-[21.28px] shrink-0 w-[267.403px]"
                 data-node-id="438:6603"
               >
                 <div className="-rotate-2 flex-none">
@@ -1735,7 +1736,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[519.431px] items-center justify-center left-[496px] top-[14px] w-[279.218px]"
+                className="flex h-[519.431px] items-center justify-center mt-[14px] shrink-0 w-[279.218px]"
                 data-node-id="438:6607"
               >
                 <div className="flex-none rotate-[3.36deg]">
@@ -1776,7 +1777,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[515.683px] items-center justify-center left-[754px] top-[11px] w-[275.997px]"
+                className="flex h-[515.683px] items-center justify-center mt-[11px] shrink-0 w-[275.997px]"
                 data-node-id="438:6611"
               >
                 <div className="-rotate-3 flex-none">
@@ -1817,7 +1818,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[511.41px] items-center justify-center left-[1011.5px] top-[10px] w-[267.402px]"
+                className="flex h-[511.41px] items-center justify-center mt-[10px] shrink-0 w-[267.402px]"
                 data-node-id="438:6615"
               >
                 <div className="flex-none rotate-2">
@@ -2233,8 +2234,9 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
         data-node-id="438:6679"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[64px] relative shrink-0 w-[1280px]"
+        <Link
+          href="/work/screen-mirroring"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[64px] relative shrink-0 w-[1280px]"
           data-node-id="526:5163"
           data-name="Next case study"
         >
@@ -2265,14 +2267,14 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
           <div
             className="h-[170px] relative rounded-[16px] shrink-0 w-[260px]"
             data-node-id="526:5168"
-            data-name="Paste — Zorvex thumbnail"
+            data-name="Paste — Screen Mirroring thumbnail"
           >
             <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[16px]">
               <div className="absolute bg-[#efe9ff] inset-0 rounded-[16px]" />
               <img
                 alt=""
                 className="absolute max-w-none object-cover rounded-[16px] size-full"
-                src={imgPasteZorvexThumbnail}
+                src={imgScreenMirroring}
               />
             </div>
           </div>
@@ -2282,7 +2284,7 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] max-[1100px]:px-[clamp(24px,5vw,56px)] relative shrink-0 w-full"

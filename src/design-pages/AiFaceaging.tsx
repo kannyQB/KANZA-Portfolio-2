@@ -1,4 +1,5 @@
 import BeforeAfterSlider from "@/components/BeforeAfterSlider"
+import Link from "next/link"
 
 const assetPathPrefix = "/assets";
 const imgPasteCoverPhone = `${assetPathPrefix}/b9991.png`;
@@ -2364,8 +2365,9 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
         data-node-id="438:5589"
         data-name="Next"
       >
-        <div
-          className="border-[#e7dadd] border-solid border-t content-stretch flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
+        <Link
+          href="/work/freelance-ops"
+          className="border-[#e7dadd] border-solid border-t content-stretch cursor-pointer flex gap-[24px] items-center pt-[64px] relative shrink-0 w-full"
           data-node-id="438:5590"
           data-name="Next case study"
         >
@@ -2410,7 +2412,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
           >
             →
           </p>
-        </div>
+        </Link>
       </div>
       <div
         className="bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[128px] px-[270px] max-[1100px]:px-[clamp(24px,5vw,56px)] relative shrink-0 w-full"
