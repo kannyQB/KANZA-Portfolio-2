@@ -2422,4 +2422,14 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
           data-name="Bottom bar"
         >
           <p
-            className="relativ
+            className="relative shrink-0"
+            data-node-id="438:5990"
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          <p className="relative shrink-0" data-node-id="438:5991">
+            Back to top ↑
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
