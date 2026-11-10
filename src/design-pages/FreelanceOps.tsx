@@ -1519,7 +1519,7 @@ export default function CaseStudyFreelanceOpsV3CheckedVsSourceFile() {
             Wireframe to final
           </p>
           <div
-            className="content-stretch flex flex-[1_0_0] flex-col gap-[22px] items-start min-w-px relative"
+            className="content-stretch flex flex-[1_0_0] flex-col gap-[22px] items-start min-w-px relative max-[900px]:w-full"
             data-node-id="438:5855"
             data-name="c"
           >
