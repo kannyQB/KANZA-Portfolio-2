@@ -105,7 +105,7 @@ export default function AboutRefinedReviewV2V3Eu() {
             className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
             data-node-id="I346:494;7:122"
           >
-            Lahore · PKT
+            Lahore · PK
           </p>
           <div
             className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
@@ -177,7 +177,7 @@ export default function AboutRefinedReviewV2V3Eu() {
                 className="relative shrink-0 text-[#1a0e14]"
                 data-node-id="346:504"
               >
-                Lahore · PKT (GMT+5)
+                Lahore,Pakistan
               </p>
             </div>
             <div
@@ -1687,7 +1687,7 @@ export default function AboutRefinedReviewV2V3Eu() {
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="346:770"
             >
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan
             </p>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
@@ -1767,7 +1767,7 @@ export default function AboutRefinedReviewV2V3Eu() {
           <p
             className="relative shrink-0"
             data-node-id="346:781"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan`}</p>
           <p className="relative shrink-0" data-node-id="346:782">
             Back to top ↑
           </p>

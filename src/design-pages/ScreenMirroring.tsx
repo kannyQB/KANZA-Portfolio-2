@@ -22,7 +22,6 @@ const imgIMockupGooglePixel8Pro13 = `${assetPathPrefix}/509ef.png`
 const imgVigil = `${assetPathPrefix}/1da72.png`
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgEllipse = `${assetPathPrefix}/2323f.svg`
-const imgStepDot = `${assetPathPrefix}/88ca7.svg`
 const imgEllipse1 = `${assetPathPrefix}/fb001.svg`
 const imgEllipse2 = `${assetPathPrefix}/7d698.svg`
 const imgFrame = `${assetPathPrefix}/d4cb8.svg`
@@ -92,7 +91,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
             className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
             data-node-id="I346:784;7:122"
           >
-            Lahore · PKT
+            Lahore · PK
           </p>
           <div
             className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
@@ -143,7 +142,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
               data-node-id="346:788"
             >
               <div
-                className="absolute flex h-[666.575px] items-center justify-center left-[999.94px] top-[232.06px] w-[383.058px]"
+                className="absolute flex h-[666.575px] items-center justify-center left-[1200px] top-[232.06px] w-[383.058px]"
                 data-node-id="346:789"
               >
                 <div className="flex-none rotate-[8.04deg]">
@@ -160,7 +159,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[663.317px] items-center justify-center left-[551px] top-[227.29px] w-[374.033px]"
+                className="absolute flex h-[663.317px] items-center justify-center left-[850px] top-[227.29px] w-[374.033px]"
                 data-node-id="346:790"
               >
                 <div className="flex-none rotate-[-7.16deg]">
@@ -177,7 +176,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 </div>
               </div>
               <div
-                className="absolute h-[733px] left-[799px] top-[132px] w-[346px]"
+                className="absolute h-[733px] left-[1068px] top-[132px] w-[346px]"
                 data-node-id="346:791"
                 data-name="iMockup - Google Pixel 8 Pro"
               >
@@ -190,7 +189,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
             </div>
           </div>
           <div
-            className="absolute bg-[rgba(248,244,242,0.94)] content-stretch flex flex-col gap-[12px] items-start left-[64px] p-[36px] rounded-[28px] top-[426px] w-[560px]"
+            className="absolute bg-[rgba(248,244,242,0.94)] content-stretch flex flex-col gap-[12px] items-start left-[200px] p-[36px] rounded-[28px] top-[426px] w-[560px]"
             data-node-id="346:792"
             data-name="Title card"
           >
@@ -651,12 +650,6 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 data-name="Gap"
               >
                 <p
-                  className="leading-[normal] relative shrink-0 text-[16px] whitespace-nowrap"
-                  data-node-id="346:867"
-                >
-                  !
-                </p>
-                <p
                   className="flex-[1_0_0] leading-[20px] min-w-px relative text-[15px]"
                   data-node-id="346:868"
                 >
@@ -1016,12 +1009,12 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 data-name="Phones"
               >
                 <div
-                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] opacity-35 top-[462px] w-[990px]"
+                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] right-[105px] opacity-35 top-[462px] rounded-[1px]"
                   data-node-id="346:927"
                   data-name="Timeline line"
                 />
                 <div
-                  className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0"
+                  className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 "
                   data-node-id="346:928"
                   data-name="OB1 — Get started"
                 >
@@ -1037,16 +1030,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:930"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:932"
@@ -1074,16 +1061,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:935"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:937"
@@ -1111,16 +1092,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:940"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:942"
@@ -1148,16 +1123,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:945"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:947"
@@ -1185,16 +1154,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:950"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:952"
@@ -1224,7 +1187,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 data-name="Phones"
               >
                 <div
-                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] opacity-35 top-[462px] w-[990px]"
+                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] right-[105px] opacity-35 top-[462px]"
                   data-node-id="346:956"
                   data-name="Timeline line"
                 />
@@ -1245,16 +1208,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:959"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:961"
@@ -1282,16 +1239,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:964"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:966"
@@ -1319,16 +1270,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:969"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:971"
@@ -1356,16 +1301,10 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="346:974"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[0] relative shrink-0 text-[#1a0e14] text-[0px] whitespace-nowrap"
                     data-node-id="346:976"
@@ -2503,7 +2442,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="346:1154"
             >
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan 
             </p>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
@@ -2583,7 +2522,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
           <p
             className="relative shrink-0"
             data-node-id="346:1165"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan`}</p>
           <p className="relative shrink-0" data-node-id="346:1166">
             Back to top ↑
           </p>

@@ -15,7 +15,6 @@ const imgIMockupGooglePixel8Pro8 = `${assetPathPrefix}/9db2e.png`;
 const imgIMockupGooglePixel8Pro9 = `${assetPathPrefix}/ccdd4.png`;
 const imgIMockupGooglePixel8Pro10 = `${assetPathPrefix}/d7d5d.png`;
 const imgIMockupGooglePixel8Pro11 = `${assetPathPrefix}/605ef.png`;
-const imgRectangle2 = `${assetPathPrefix}/976ff.png`;
 const imgRectangle3 = `${assetPathPrefix}/18b2e.png`;
 const imgRectangle1 = `${assetPathPrefix}/dd0d7.png`;
 const imgIMockupGooglePixel8Pro12 = `${assetPathPrefix}/f0e32.png`;
@@ -24,7 +23,6 @@ const imgIMockupGooglePixel8Pro14 = `${assetPathPrefix}/24218.png`;
 const imgPasteFreelanceOpsThumbnail = `${assetPathPrefix}/37738.png`;
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`;
 const imgEllipse = `${assetPathPrefix}/2323f.svg`;
-const imgStepDot = `${assetPathPrefix}/88ca7.svg`;
 const imgEllipse1 = `${assetPathPrefix}/7d698.svg`;
 const imgFrame = `${assetPathPrefix}/d4cb8.svg`;
 const imgFrame1 = `${assetPathPrefix}/764f1.svg`;
@@ -93,7 +91,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
             data-node-id="I438:5265;7:122"
           >
-            Lahore · PKT
+            Lahore · PK
           </p>
           <a
             href="mailto:kannyqb@gmail.com"
@@ -644,12 +642,6 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 data-name="Gap"
               >
                 <p
-                  className="leading-[normal] relative shrink-0 text-[16px] whitespace-nowrap"
-                  data-node-id="438:5348"
-                >
-                  !
-                </p>
-                <p
                   className="flex-[1_0_0] leading-[20px] min-w-px relative text-[15px]"
                   data-node-id="438:5349"
                 >
@@ -982,7 +974,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 data-name="Phones"
               >
                 <div
-                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] opacity-35 top-[462px] w-[990px]"
+                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] right-[105px] opacity-35 top-[462px] rounded-[1px]"
                   data-node-id="438:5408"
                   data-name="Timeline line"
                 />
@@ -992,7 +984,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   data-name="OB1 — Get started"
                 >
                   <div
-                    className="h-[455px] relative shrink-0 w-[210px]"
+                    className="h-[445px] relative shrink-0 w-[210px]"
                     data-node-id="453:424"
                     data-name="iMockup - Google Pixel 8 Pro"
                   >
@@ -1003,16 +995,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5411"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5413"
@@ -1037,16 +1023,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5416"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5418"
@@ -1069,16 +1049,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5421"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5423"
@@ -1103,16 +1077,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5426"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5428"
@@ -1144,16 +1112,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     </div>
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5431"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5433"
@@ -1178,17 +1140,17 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 data-name="Phones"
               >
                 <div
-                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] opacity-35 top-[462px] w-[990px]"
+                  className="absolute bg-[#7a0d3b] h-[2px] left-[105px] right-[105px] opacity-35 top-[462px] rounded-[1px]"
                   data-node-id="438:5437"
                   data-name="Timeline line"
                 />
                 <div
                   className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0"
                   data-node-id="438:5438"
-                  data-name="No Wi-Fi 1 — Get started"
+                  data-name="Style 1 — Pick a style"
                 >
                   <div
-                    className="h-[455px] relative shrink-0 w-[215px]"
+                    className="h-[445px] relative shrink-0 w-[210px]"
                     data-node-id="454:431"
                     data-name="iMockup - Google Pixel 8 Pro"
                   >
@@ -1199,16 +1161,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5440"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5442"
@@ -1219,10 +1175,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 <div
                   className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0"
                   data-node-id="438:5443"
-                  data-name="No Wi-Fi 2 — Turn on Wi-Fi"
+                  data-name="Style 2 — Template prompt"
                 >
                   <div
-                    className="h-[455px] relative shrink-0 w-[215px]"
+                    className="h-[445px] relative shrink-0 w-[210px]"
                     data-node-id="455:438"
                     data-name="iMockup - Google Pixel 8 Pro"
                   >
@@ -1233,16 +1189,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5445"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5447"
@@ -1253,10 +1203,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 <div
                   className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0"
                   data-node-id="438:5448"
-                  data-name="No Wi-Fi 3 — Select TV"
+                  data-name="Style 3 — Generate"
                 >
                   <div
-                    className="h-[455px] relative shrink-0 w-[215px]"
+                    className="h-[445px] relative shrink-0 w-[210px]"
                     data-node-id="455:437"
                     data-name="iMockup - Google Pixel 8 Pro"
                   >
@@ -1267,16 +1217,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5450"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5452"
@@ -1287,10 +1231,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 <div
                   className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0"
                   data-node-id="438:5453"
-                  data-name="No Wi-Fi 4 — All set"
+                  data-name="Style 4 — Saved & shared"
                 >
                   <div
-                    className="h-[455px] relative shrink-0 w-[215px]"
+                    className="h-[445px] relative shrink-0 w-[210px]"
                     data-node-id="455:436"
                     data-name="iMockup - Google Pixel 8 Pro"
                   >
@@ -1301,16 +1245,10 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                     />
                   </div>
                   <div
-                    className="relative shrink-0 size-[12px]"
+                    className="relative shrink-0 size-[12px] rounded-full bg-[#7a0d3b]"
                     data-node-id="438:5455"
                     data-name="Step dot"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgStepDot}
-                    />
-                  </div>
+                  />
                   <p
                     className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[14px] whitespace-nowrap"
                     data-node-id="438:5457"
@@ -1533,96 +1471,6 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               before={imgRectangle1}
               after={imgRectangle3}
             />
-            <div
-              className="hidden"
-              data-node-id="455:473"
-            >
-              <div
-                className="col-1 h-[814px] ml-0 mt-0 relative rounded-[38.082px] row-1 w-[960px]"
-                data-node-id="455:474"
-              >
-                <div
-                  aria-hidden
-                  className="absolute inset-0 pointer-events-none rounded-[38.082px]"
-                >
-                  <div className="absolute inset-0 overflow-hidden rounded-[38.082px]">
-                    <img
-                      alt=""
-                      className="absolute h-[100.01%] left-0 max-w-none top-0 w-[203.61%]"
-                      src={imgRectangle2}
-                    />
-                  </div>
-                  <img
-                    alt=""
-                    className="absolute max-w-none object-cover rounded-[38.082px] size-full"
-                    src={imgRectangle3}
-                  />
-                </div>
-              </div>
-              <div
-                className="col-1 h-[814px] ml-0 mt-0 relative rounded-bl-[38.082px] rounded-tl-[38.082px] row-1 w-[480px]"
-                data-node-id="455:475"
-              >
-                <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-bl-[38.082px] rounded-tl-[38.082px]">
-                  <img
-                    alt=""
-                    className="absolute h-full left-[0.06%] max-w-none top-0 w-[199.98%]"
-                    src={imgRectangle1}
-                  />
-                </div>
-              </div>
-              <div
-                className="col-1 content-stretch flex flex-col h-[814px] items-start ml-[25.56px] mt-0 relative row-1 w-[910.111px]"
-                data-node-id="455:476"
-              >
-                <div
-                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
-                  data-node-id="455:477"
-                >
-                  <div
-                    className="bg-white col-1 content-stretch flex h-[46.979px] items-center justify-center ml-[744.22px] mt-[28.01px] overflow-clip px-[16.557px] py-[8.279px] relative rounded-[25.388px] row-1 shadow-[0px_5.519px_16.557px_0px_rgba(0,0,0,0.08)] w-[158.674px]"
-                    data-node-id="455:478"
-                    data-name="Label Final UI"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[30.355px] relative shrink-0 text-[#1a0e14] text-[19.317px] whitespace-nowrap"
-                      data-node-id="455:479"
-                    >
-                      Final UI
-                    </p>
-                  </div>
-                  <div
-                    className="bg-white col-1 content-stretch flex h-[46.979px] items-center justify-center ml-0 mt-[28.01px] overflow-clip px-[16.557px] py-[8.279px] relative rounded-[25.388px] row-1 shadow-[0px_5.519px_16.557px_0px_rgba(0,0,0,0.08)] w-[158.674px]"
-                    data-node-id="455:480"
-                    data-name="Label Final UI"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[30.355px] relative shrink-0 text-[#1a0e14] text-[19.317px] text-center whitespace-nowrap"
-                      data-node-id="455:481"
-                    >
-                      Wireframe
-                    </p>
-                  </div>
-                  <div
-                    className="bg-[#7a0d3b] border-[4.139px] border-solid border-white col-1 content-stretch flex h-[58.71px] items-center justify-center ml-[425.28px] mt-[377.65px] overflow-clip relative rounded-[1378.398px] row-1 w-[57.123px]"
-                    data-node-id="455:482"
-                    data-name="Handle"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[30.355px] relative shrink-0 text-[19.317px] text-white whitespace-nowrap"
-                      data-node-id="455:483"
-                    >
-                      ‹ ›
-                    </p>
-                  </div>
-                  <div
-                    className="bg-[#7a0d3b] col-1 h-[814px] ml-[452.26px] mt-0 relative row-1 w-[2.818px]"
-                    data-node-id="455:484"
-                    data-name="Divider"
-                  />
-                </div>
-              </div>
-            </div>
             <p
               className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[20px] min-w-full relative shrink-0 text-[#6e5b63] text-[14px] w-[min-content]"
               data-node-id="438:5498"
@@ -1654,12 +1502,12 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               No silent waits: every AI moment tells people what’s happening.
             </p>
             <div
-              className="h-[590px] relative shrink-0 w-full"
+              className="flex items-start gap-[20px] h-[590px] relative shrink-0 w-full"
               data-node-id="438:5508"
               data-name="States — pastel cards"
             >
               <div
-                className="absolute flex h-[514.769px] items-center justify-center left-0 top-[10px] w-[275.95px]"
+                className="flex h-[514.769px] items-center justify-center mt-[10px] shrink-0 w-[275.95px]"
                 data-node-id="438:5509"
               >
                 <div className="flex-none rotate-3">
@@ -1700,7 +1548,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[512.023px] items-center justify-center left-[259px] top-[21.28px] w-[267.423px]"
+                className="flex h-[512.023px] items-center justify-center mt-[21.28px] shrink-0 w-[267.423px]"
                 data-node-id="438:5513"
               >
                 <div className="-rotate-2 flex-none">
@@ -1748,7 +1596,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[519.133px] items-center justify-center left-[496px] top-[14px] w-[279.2px]"
+                className="flex h-[519.133px] items-center justify-center mt-[14px] shrink-0 w-[279.2px]"
                 data-node-id="438:5517"
               >
                 <div className="flex-none rotate-[3.36deg]">
@@ -1789,7 +1637,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[518.321px] items-center justify-center left-[754px] top-[11px] w-[276.136px]"
+                className="flex h-[518.321px] items-center justify-center mt-[11px] shrink-0 w-[276.136px]"
                 data-node-id="438:5521"
               >
                 <div className="-rotate-3 flex-none">
@@ -1830,7 +1678,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                 </div>
               </div>
               <div
-                className="absolute flex h-[511.021px] items-center justify-center left-[1011.5px] top-[10px] w-[267.388px]"
+                className="flex h-[511.021px] items-center justify-center mt-[10px] shrink-0 w-[267.388px]"
                 data-node-id="438:5525"
               >
                 <div className="flex-none rotate-2">
@@ -2124,7 +1972,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
                   data-node-id="438:5551"
                 >
-                  ✓ Contrast checked on violet buttons (WCAG 2.1 AA) 
+                  ✓ Contrast checked on violet buttons (WCAG 2.1 AA)
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] min-w-full relative shrink-0 text-[15px] w-[min-content]"
@@ -2471,9 +2319,9 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               className="relative shrink-0 size-[18px]"
               data-node-id="438:5607"
               data-name="Frame"
-           / >
+            >
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame1} />
-            </a>
+            </div>
             <p
               className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[15px] text-white whitespace-nowrap"
               data-node-id="438:5609"
@@ -2487,7 +2335,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             >
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame2} />
             </div>
-          </div>
+          </a>
         </div>
         <div
           className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap"
@@ -2509,7 +2357,7 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="438:5615"
             >
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan 
             </p>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
@@ -2591,11 +2439,12 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
           <p
             className="relative shrink-0"
             data-node-id="438:5626"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan`}</p>
           <p className="relative shrink-0" data-node-id="438:5627">
             Back to top ↑
           </p>
         </div>
       </div>
+    </div>
   );
 }

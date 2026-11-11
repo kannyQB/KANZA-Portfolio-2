@@ -126,7 +126,7 @@ export default function Desktop2() {
         </div>
         <div className="content-stretch flex gap-[20px] items-center overflow-clip relative shrink-0">
           <p className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap">
-            Lahore · PKT
+            Lahore · PK
           </p>
           <div className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0">
             <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[20px] relative shrink-0 text-[15px] text-white whitespace-nowrap">
@@ -383,7 +383,7 @@ export default function Desktop2() {
         <div className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap">
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
             <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">Based in</p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Lahore — 14:30 PKT (GMT+5)</p>
+            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Lahore,Pakistan</p>
             <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Usually replies within 1 working day</p>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
@@ -399,7 +399,7 @@ export default function Desktop2() {
           </div>
         </div>
         <div className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] text-white w-full whitespace-nowrap">
-          <p className="relative shrink-0">© 2026 Kanza Iqbal · Designed & built with care in Lahore</p>
+          <p className="relative shrink-0">© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan</p>
           <p className="relative shrink-0">Back to top ↑</p>
         </div>
       </div>

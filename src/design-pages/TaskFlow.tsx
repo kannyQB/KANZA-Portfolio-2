@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const assetPathPrefix = "/assets"
 const imgCover = `${assetPathPrefix}/5fbd8.png`
-const imgAiFaceAging = `${assetPathPrefix}/b9991.png`
+const imgAiFaceAging = `${assetPathPrefix}/9b1d5.png`
 const imgTaskFlowFinal = `${assetPathPrefix}/f0670.png`
 const imgTaskFlowWireframe = `${assetPathPrefix}/31aef.png`
 const imgScreenPasteBoardKanban = `${assetPathPrefix}/60420.png`
@@ -112,7 +112,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
             className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
             data-node-id="I334:8685;7:122"
           >
-            Lahore · PKT
+            Lahore · PK
           </p>
           <a
             className="bg-[#1a0e14] content-stretch cursor-pointer flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
@@ -220,12 +220,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               </p>
             </div>
           </div>
-          <p
-            className="[word-break:break-word] absolute font-['Geist:Regular'] font-normal leading-[normal] left-[563px] text-[#6e5b63] text-[14px] top-[371px] whitespace-nowrap"
-            data-node-id="334:8701"
-          >
-            Paste: TaskFlow cover (01 · Cover collage)
-          </p>
+          
         </div>
       </div>
       <div
@@ -289,7 +284,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               className="font-['Geist:Medium'] font-medium leading-[21px] min-w-full relative shrink-0 text-[#1a0e14] text-[15px] w-[min-content]"
               data-node-id="334:8712"
             >
-              Solo [Confirm]
+              Solo 
             </p>
           </div>
           <div
@@ -325,7 +320,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               className="font-['Geist:Medium'] font-medium leading-[21px] min-w-full relative shrink-0 text-[#1a0e14] text-[15px] w-[min-content]"
               data-node-id="334:8718"
             >
-              Shipped [Confirm]
+              Shipped
             </p>
           </div>
         </div>
@@ -688,12 +683,6 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                 data-name="Gap"
               >
                 <p
-                  className="leading-[normal] relative shrink-0 text-[16px] whitespace-nowrap"
-                  data-node-id="334:8774"
-                >
-                  !
-                </p>
-                <p
                   className="flex-[1_0_0] leading-[20px] min-w-px relative text-[15px]"
                   data-node-id="334:8775"
                 >
@@ -819,7 +808,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                   className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[normal] relative shrink-0 text-[#1a0e14] text-[13px] whitespace-nowrap"
                   data-node-id="334:8795"
                 >
-                  Competitor review [Confirm]
+                  Competitor review
                 </p>
               </div>
               <div
@@ -1747,7 +1736,6 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                   data-node-id="334:8986"
                 >
                   ✓ Muted meta text (2.56:1) flagged — darkened to pass AA
-                  [Confirm]
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[15px]"
@@ -1775,7 +1763,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                   className="font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[15px]"
                   data-node-id="334:8991"
                 >
-                  ✓ Guests see only the projects shared with them [Confirm]
+                  ✓ Guests see only the projects shared with them 
                 </p>
                 <p
                   className="font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[15px]"
@@ -1829,7 +1817,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
                 className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#1a0e14] text-[15px] whitespace-nowrap"
                 data-node-id="334:8999"
               >
-                Shipped · 2026 [Confirm]
+                Shipped · 2026 
               </p>
             </div>
             <p
@@ -2193,7 +2181,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="334:9057"
             >
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan
             </p>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
@@ -2275,7 +2263,7 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
           <p
             className="relative shrink-0"
             data-node-id="334:9068"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan,Pakistan`}</p>
           <p className="relative shrink-0" data-node-id="334:9069">
             Back to top ↑
           </p>

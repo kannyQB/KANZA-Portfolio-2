@@ -65,7 +65,7 @@ export default function MessageSentV2V3Eu() {
             className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap"
             data-node-id="I346:1650;7:122"
           >
-            Lahore · PKT
+            Lahore · PK
           </p>
           <div
             className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
@@ -375,7 +375,7 @@ export default function MessageSentV2V3Eu() {
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="346:1711"
             >
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan 
             </p>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
@@ -455,7 +455,7 @@ export default function MessageSentV2V3Eu() {
           <p
             className="relative shrink-0"
             data-node-id="346:1722"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore`}</p>
+          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan`}</p>
           <p className="relative shrink-0" data-node-id="346:1723">
             Back to top ↑
           </p>

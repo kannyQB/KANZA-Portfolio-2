@@ -102,7 +102,7 @@ export default function ContactV2AftabStyleEuV3Eu() {
           data-name="Right"
         >
           <p className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap">
-            Lahore · PKT
+            Lahore · PK
           </p>
           <div
             className="bg-[#1a0e14] content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
@@ -205,7 +205,7 @@ export default function ContactV2AftabStyleEuV3Eu() {
               BASED IN
             </p>
             <p className="font-['Geist:Regular'] font-normal leading-[normal] relative shrink-0 text-[#1a0e14] text-[16px]">
-              Lahore, Pakistan — 14:30 PKT (GMT+5)
+              Lahore, Pakistan 
             </p>
           </div>
           <div
@@ -491,7 +491,7 @@ export default function ContactV2AftabStyleEuV3Eu() {
               Based in
             </p>
             <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
-              Lahore — 14:30 PKT (GMT+5)
+              Lahore,Pakistan 
             </p>
             <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
               Usually replies within 1 working day
@@ -532,7 +532,7 @@ export default function ContactV2AftabStyleEuV3Eu() {
           className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] text-white w-full whitespace-nowrap"
           data-name="Bottom bar"
         >
-          <p className="relative shrink-0">© 2026 Kanza Iqbal · Designed & built with care in Lahore</p>
+          <p className="relative shrink-0">© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan</p>
           <p className="relative shrink-0">Back to top ↑</p>
         </div>
       </div>
