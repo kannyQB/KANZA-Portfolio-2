@@ -8,7 +8,6 @@ const imgTaskFlowFinal = `${assetPathPrefix}/f0670.png`
 const imgTaskFlowWireframe = `${assetPathPrefix}/31aef.png`
 const imgScreenPasteBoardKanban = `${assetPathPrefix}/60420.png`
 const imgScreenPasteReports = `${assetPathPrefix}/dc492.png`
-const imgScreenPasteTaskDetails = `${assetPathPrefix}/f81a2.png`
 const imgTaskFlow = `${assetPathPrefix}/9b1d5.png`
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgEllipse = `${assetPathPrefix}/2323f.svg`
@@ -22,6 +21,30 @@ const imgEllipse7 = `${assetPathPrefix}/7d698.svg`
 const imgFrame = `${assetPathPrefix}/d4cb8.svg`
 const imgFrame1 = `${assetPathPrefix}/764f1.svg`
 const imgFrame2 = `${assetPathPrefix}/39cd9.svg`
+
+function BrowserMockup({
+  url,
+  src,
+}: {
+  url: string
+  src: string
+}) {
+  return (
+    <div className="bg-white flex flex-[1_0_0] flex-col min-w-0 overflow-clip rounded-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]">
+      <div className="border-[#e7dadd] border-b border-solid flex gap-[6px] items-center px-[14px] py-[10px] shrink-0 w-full">
+        <img alt="" className="block size-[9px]" src={imgEllipse4} />
+        <img alt="" className="block size-[9px]" src={imgEllipse5} />
+        <img alt="" className="block size-[9px]" src={imgEllipse6} />
+        <div className="bg-[#0b1220] flex flex-[1_0_0] items-center justify-center min-w-px px-[10px] py-[4px] rounded-[999px]">
+          <p className="font-['Geist:SemiBold'] font-semibold leading-[normal] text-[11px] text-white whitespace-nowrap">
+            {url}
+          </p>
+        </div>
+      </div>
+      <img alt="" className="block h-auto w-full" src={src} />
+    </div>
+  )
+}
 
 export default function CaseStudyTaskFlowDashboardTemplate() {
   return (
@@ -1552,230 +1575,28 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
         >
           <div
             className="content-stretch flex flex-col items-start relative shrink-0 w-[240px]"
-            data-node-id="334:8934"
             data-name="Label"
           >
-            <p
-              className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.44px] whitespace-nowrap"
-              data-node-id="334:8935"
-            >
+            <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.44px] whitespace-nowrap">
               Final screens
             </p>
           </div>
           <div
             className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative"
-            data-node-id="334:8936"
             data-name="c"
           >
             <div
-              className="bg-[#f1e8e9] content-stretch flex gap-[16px] items-center p-[12px] relative rounded-[24px] shrink-0 w-full"
-              data-node-id="334:8937"
+              className="bg-[#f1e8e9] flex gap-[24px] items-start justify-center p-[28px] relative rounded-[24px] w-full max-[900px]:flex-col"
               data-name="Mockups stage"
             >
-              <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[380px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
-                data-node-id="334:8938"
-                data-name="Browser mockup — Board (Kanban)"
-              >
-                <div
-                  className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
-                  data-node-id="334:8939"
-                  data-name="Top bar"
-                >
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8940"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse4}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8941"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse5}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8942"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse6}
-                    />
-                  </div>
-                  <div
-                    className="bg-[#0b1220] content-stretch flex flex-[1_0_0] items-start justify-center min-w-px px-[10px] py-[4px] relative rounded-[999px]"
-                    data-node-id="334:8943"
-                    data-name="URL"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[11px] text-white whitespace-nowrap"
-                      data-node-id="334:8944"
-                    >
-                      app.taskflow.io
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="h-[336px] relative shrink-0 w-full"
-                  data-node-id="334:8945"
-                  data-name="Screen — paste Board (Kanban)"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgScreenPasteBoardKanban}
-                  />
-                </div>
-              </div>
-              <div
-                className="bg-white content-stretch flex flex-[1_0_0] flex-col h-[380px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)]"
-                data-node-id="334:8946"
-                data-name="Browser mockup — Reports"
-              >
-                <div
-                  className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
-                  data-node-id="334:8947"
-                  data-name="Top bar"
-                >
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8948"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse4}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8949"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse5}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8950"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse6}
-                    />
-                  </div>
-                  <div
-                    className="bg-[#0b1220] content-stretch flex flex-[1_0_0] items-start justify-center min-w-px px-[10px] py-[4px] relative rounded-[999px]"
-                    data-node-id="334:8951"
-                    data-name="URL"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[11px] text-white whitespace-nowrap"
-                      data-node-id="334:8952"
-                    >
-                      app.taskflow.io
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="h-[336px] relative shrink-0 w-full"
-                  data-node-id="334:8953"
-                  data-name="Screen — paste Reports"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgScreenPasteReports}
-                  />
-                </div>
-              </div>
-              <div
-                className="hidden"
-                data-node-id="334:8954"
-                data-name="Browser mockup — Task details"
-              >
-                <div
-                  className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
-                  data-node-id="334:8955"
-                  data-name="Top bar"
-                >
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8956"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse4}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8957"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse5}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="334:8958"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse6}
-                    />
-                  </div>
-                  <div
-                    className="bg-[#0b1220] content-stretch flex flex-[1_0_0] items-start justify-center min-w-px px-[10px] py-[4px] relative rounded-[999px]"
-                    data-node-id="334:8959"
-                    data-name="URL"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[11px] text-white whitespace-nowrap"
-                      data-node-id="334:8960"
-                    >
-                      app.taskflow.io
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="h-[197px] relative shrink-0 w-full"
-                  data-node-id="334:8961"
-                  data-name="Screen — paste Task details"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgScreenPasteTaskDetails}
-                  />
-                </div>
-              </div>
+              <BrowserMockup
+                url="app.taskflow.io"
+                src={imgScreenPasteBoardKanban}
+              />
+              <BrowserMockup
+                url="app.taskflow.io"
+                src={imgScreenPasteReports}
+              />
             </div>
           </div>
         </div>

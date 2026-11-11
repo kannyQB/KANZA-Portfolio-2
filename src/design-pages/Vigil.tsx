@@ -7,7 +7,6 @@ const imgImage2 = `${assetPathPrefix}/d1878.png`
 const imgTaskFlow = `${assetPathPrefix}/5fbd8.png`
 const imgWireframeHalf1 = `${assetPathPrefix}/976ff.png`
 const imgScreenPasteDashboardLiveFeed = `${assetPathPrefix}/2d025.png`
-const imgScreenPasteAlertDetailActions = `${assetPathPrefix}/2df2e.png`
 const imgScreenPasteMobileCompanion = `${assetPathPrefix}/70115.png`
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgEllipse = `${assetPathPrefix}/2323f.svg`
@@ -21,6 +20,40 @@ const imgEllipse7 = `${assetPathPrefix}/7d698.svg`
 const imgFrame = `${assetPathPrefix}/d4cb8.svg`
 const imgFrame1 = `${assetPathPrefix}/764f1.svg`
 const imgFrame2 = `${assetPathPrefix}/39cd9.svg`
+
+function BrowserMockup({
+  url,
+  src,
+  urlBg,
+  urlText,
+}: {
+  url: string
+  src: string
+  urlBg: string
+  urlText: string
+}) {
+  return (
+    <div className="bg-white flex flex-col min-w-0 overflow-clip rounded-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)] w-full">
+      <div className="border-[#e7dadd] border-b border-solid flex gap-[6px] items-center px-[14px] py-[10px] shrink-0 w-full">
+        <img alt="" className="block size-[9px]" src={imgEllipse4} />
+        <img alt="" className="block size-[9px]" src={imgEllipse5} />
+        <img alt="" className="block size-[9px]" src={imgEllipse6} />
+        <div
+          className="flex flex-[1_0_0] items-center justify-center min-w-px px-[10px] py-[4px] rounded-[999px]"
+          style={{ backgroundColor: urlBg }}
+        >
+          <p
+            className="font-['Geist:SemiBold'] font-semibold leading-[normal] text-[11px] whitespace-nowrap"
+            style={{ color: urlText }}
+          >
+            {url}
+          </p>
+        </div>
+      </div>
+      <img alt="" className="block h-auto w-full" src={src} />
+    </div>
+  )
+}
 
 export default function CsO5OverlayInsetJumpLinksV3Eu() {
   return (
@@ -1544,187 +1577,40 @@ export default function CsO5OverlayInsetJumpLinksV3Eu() {
         >
           <div
             className="content-stretch flex flex-col items-start relative shrink-0 w-[240px]"
-            data-node-id="346:1407"
             data-name="Label"
           >
-            <p
-              className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.44px] whitespace-nowrap"
-              data-node-id="346:1408"
-            >
+            <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[28px] relative shrink-0 text-[#1a0e14] text-[22px] tracking-[-0.44px] whitespace-nowrap">
               Final screens
             </p>
           </div>
           <div
             className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative"
-            data-node-id="346:1409"
             data-name="c"
           >
             <div
-              className="bg-[#f1e8e9] content-stretch flex gap-[16px] items-center p-[12px] relative rounded-[24px] shrink-0 w-full max-[900px]:flex-col"
-              data-node-id="346:1410"
+              className="bg-[#f1e8e9] flex gap-[24px] items-center justify-center p-[28px] relative rounded-[24px] w-full max-[900px]:flex-col"
               data-name="Mockups stage"
             >
+              <div className="flex flex-[1_0_0] min-w-0 max-[900px]:w-full" data-name="Desktop screen">
+                <BrowserMockup
+                  url="app.vigil.io"
+                  src={imgScreenPasteDashboardLiveFeed}
+                  urlBg="#05242a"
+                  urlText="#f8f4f2"
+                />
+              </div>
+
               <div
-                className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-stretch min-w-px max-[900px]:w-full"
-                data-name="Desktop screens"
-              >
-                <div
-                  className="bg-white content-stretch flex flex-col h-[400px] items-start min-w-px overflow-clip relative rounded-tl-[14px] rounded-tr-[14px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.12)] shrink-0 w-full"
-                  data-node-id="346:1411"
-                  data-name="Browser mockup — Dashboard — live feed"
-                >
-                <div
-                  className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
-                  data-node-id="346:1412"
-                  data-name="Top bar"
-                >
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1413"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse4}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1414"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse5}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1415"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse6}
-                    />
-                  </div>
-                  <div
-                    className="bg-[#05242a] content-stretch flex flex-[1_0_0] items-start justify-center min-w-px px-[10px] py-[4px] relative rounded-[999px]"
-                    data-node-id="346:1416"
-                    data-name="URL"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#f8f4f2] text-[11px] whitespace-nowrap"
-                      data-node-id="346:1417"
-                    >
-                      app.vigil.io
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="h-[357px] relative shrink-0 w-full"
-                  data-node-id="346:1418"
-                  data-name="Screen — paste Dashboard — live feed"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgScreenPasteDashboardLiveFeed}
-                  />
-                </div>
-              </div>
-                <div
-                  className="hidden"
-                  data-node-id="346:1419"
-                  data-name="Browser mockup — Alert detail & actions"
-                >
-                <div
-                  className="border-[#e7dadd] border-b border-solid content-stretch flex gap-[6px] items-center px-[14px] py-[10px] relative shrink-0 w-full"
-                  data-node-id="346:1420"
-                  data-name="Top bar"
-                >
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1421"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse4}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1422"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse5}
-                    />
-                  </div>
-                  <div
-                    className="relative shrink-0 size-[9px]"
-                    data-node-id="346:1423"
-                    data-name="Ellipse"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgEllipse6}
-                    />
-                  </div>
-                  <div
-                    className="bg-[#05242a] content-stretch flex flex-[1_0_0] items-start justify-center min-w-px px-[10px] py-[4px] relative rounded-[999px]"
-                    data-node-id="346:1424"
-                    data-name="URL"
-                  >
-                    <p
-                      className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#f8f4f2] text-[11px] whitespace-nowrap"
-                      data-node-id="346:1425"
-                    >
-                      app.vigil.io
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="h-[228px] relative shrink-0 w-full"
-                  data-node-id="346:1426"
-                  data-name="Screen — paste Alert detail & actions"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgScreenPasteAlertDetailActions}
-                  />
-                </div>
-              </div>
-              </div>
-              <div
-                className="bg-[#14161a] h-[400px] overflow-clip relative rounded-[30px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.16)] shrink-0 w-[190px] max-[900px]:self-center"
-                data-node-id="346:1427"
+                className="bg-[#14161a] h-[400px] overflow-clip relative rounded-[30px] shadow-[0px_16px_36px_0px_rgba(26,0,13,0.16)] shrink-0 w-[190px]"
                 data-name="Phone mockup — Mobile companion"
               >
-                <div
-                  className="absolute h-[388px] left-[6px] overflow-clip rounded-[25px] top-[6px] w-[178px]"
-                  data-node-id="346:1428"
-                  data-name="Screen — paste Mobile companion"
-                >
+                <div className="absolute h-[388px] left-[6px] overflow-clip rounded-[25px] top-[6px] w-[178px]">
                   <img
                     alt=""
-                    className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[25px] size-full"
+                    className="absolute inset-0 max-w-none object-cover object-top pointer-events-none rounded-[25px] size-full"
                     src={imgScreenPasteMobileCompanion}
                   />
-                  <div
-                    className="absolute bg-[#14161a] h-[14px] left-[62px] rounded-[99px] top-[8px] w-[54px]"
-                    data-node-id="346:1429"
-                    data-name="Rectangle"
-                  />
+                  <div className="absolute bg-[#14161a] h-[14px] left-[62px] rounded-[99px] top-[8px] w-[54px]" />
                 </div>
               </div>
             </div>
