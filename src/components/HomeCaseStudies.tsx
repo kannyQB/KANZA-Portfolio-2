@@ -108,7 +108,7 @@ const caseStudies = [
     outcome:
       "Shipped as an AI-powered mobile app with a clear path from photo selection to preview.",
 
-    href: "/work",
+    href: "/work/ai-face-aging",
   },
 
   {
@@ -274,17 +274,17 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
         data-name="Feature/Website Redesign"
       >
         <div
-  className={`case-study-card__media ${
-    study.beforeImage ? "" : "case-study-card__media--stand-in"
-  }`}
->
-  <BeforeAfterSlider
-    after={study.image}
-    aspectRatio={600 / 513}
-    before={study.beforeImage ?? study.image}
-    ariaLabel={`Compare the ${study.name} wireframe with the final interface`}
-  />
-</div>  
+          className={`case-study-card__media ${
+            study.beforeImage ? "" : "case-study-card__media--stand-in"
+          }`}
+        >
+          <BeforeAfterSlider
+            after={study.image}
+            aspectRatio={600 / 513}
+            before={study.beforeImage ?? study.image}
+            ariaLabel={`Compare the ${study.name} wireframe with the final interface`}
+          />
+        </div>
         <div
           className="case-study-card__content flex flex-col gap-[24px] items-start relative"
           data-name="Text"

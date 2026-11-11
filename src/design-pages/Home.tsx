@@ -27,31 +27,33 @@ const testimonials = [
     color: "#f6dae5",
   },
   {
-    quote: "A sharp eye for clean aesthetics.",
+    quote:
+      "An incredibly promising UI/UX talent, with a strong grasp of design principles, a sharp eye for clean aesthetics and a genuine eagerness to learn and adapt. What stood out most was her dedication to understanding user journeys and her collaborative spirit — always receptive to feedback and constantly raising the quality of her handoffs.",
     name: "Izzah Khawar",
-    role: "iOS Developer",
+    role: "iOS Developer", // VERIFY: Figma mein company name bhi hai
     initials: "IK",
     group: "Colleagues",
     color: "#ead3de",
   },
   {
-    quote: "Intuitive, visually appealing designs.",
+    quote:
+      "Over a year at Assopp, Kanza consistently showed creativity, attention to detail and a strong understanding of user-centered design. She turns ideas into intuitive, visually appealing designs that enhanced the user experience and contributed significantly to the success of our projects. Highly collaborative and always striving to improve.", // VERIFY: "Assopp" spelling
     name: "Syed Shayan Naqvi",
-    role: "Mentor",
+    role: "Mentor", // VERIFY: Figma wali role/company
     initials: "SN",
     group: "Colleagues",
     color: "#f4e3d6",
   },
   {
-    quote: "User-friendly and easy to implement.",
+    quote:
+      "I had the pleasure of working with Kanza as a Product Manager and SQA Engineer. She is a highly talented UI/UX designer who truly understands product requirements. Her designs are not only visually appealing but also very user-friendly and easy to implement. Communication was smooth and she delivered everything on time. Highly recommended!",
     name: "Munib ur Rehman",
-    role: "Product Manager",
+    role: "Product Manager & SQA Engineer",
     initials: "MR",
     group: "Colleagues",
     color: "#e5e9f8",
   },
 ] as const
-
 const designerStrip = [
   "Product Design",
   "UX Research",

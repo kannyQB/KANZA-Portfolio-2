@@ -18,6 +18,8 @@ type BeforeAfterSliderProps = {
   ariaLabel?: string
 }
 
+const HANDLE_SIZE = 32
+
 export default function BeforeAfterSlider({
   before,
 
@@ -166,11 +168,12 @@ export default function BeforeAfterSlider({
       </span>
       <div
         className="comparison-slider__marker pointer-events-none absolute inset-y-0 z-[1]"
-        style={{ left: `${position}%` }}
+        style={{ left: `${position}%`, width: 0 }}
       >
         <span
           aria-hidden="true"
-          className="comparison-slider__divider absolute inset-y-0 left-0 w-[2px] -translate-x-1/2 bg-[#7a0d3b]"
+          className="comparison-slider__divider absolute inset-y-0 bg-[#7a0d3b]"
+          style={{ left: -1, width: 2, transform: "none" }}
         />
         <button
           aria-label="Move comparison slider"
@@ -179,9 +182,17 @@ export default function BeforeAfterSlider({
           aria-valuemin={0}
           aria-valuenow={Math.round(position)}
           aria-valuetext={`${Math.round(position)}% of the wireframe is visible`}
-          className="comparison-slider__handle pointer-events-auto absolute left-0 top-1/2 z-[2] flex size-[32px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-white bg-[#7a0d3b] text-xs text-white shadow-[0_3px_10px_rgba(26,14,20,0.22)]"
+          className="comparison-slider__handle pointer-events-auto absolute z-[2] flex items-center justify-center rounded-full border-[2px] border-white bg-[#7a0d3b] text-xs text-white shadow-[0_3px_10px_rgba(26,14,20,0.22)]"
           onKeyDown={handleSliderKeyDown}
           role="slider"
+          style={{
+            left: -HANDLE_SIZE / 2,
+            top: "50%",
+            marginTop: -HANDLE_SIZE / 2,
+            width: HANDLE_SIZE,
+            height: HANDLE_SIZE,
+            transform: "none",
+          }}
           type="button"
         >
           <svg
