@@ -17,10 +17,8 @@ const helpChips = [
   "Full-time role",
   "Something else",
 ]
-const helpSelected = "Mobile app"
 
 const budgetChips = ["< €1k", "€1k–3k", "€3k–6k", "€6k+", "Not sure yet"]
-const budgetSelected = "Not sure yet"
 
 const steps = [
   {
@@ -67,6 +65,8 @@ const faqs = [
 export default function ContactV2AftabStyleEuV3Eu() {
   // 0 = pehla sawal khula. Sab band chahiye to null likho.
   const [open, setOpen] = useState<number | null>(0)
+  const [helpSelected, setHelpSelected] = useState("Mobile app")
+  const [budgetSelected, setBudgetSelected] = useState("Not sure yet")
 
   return (
     <div
@@ -185,9 +185,16 @@ export default function ContactV2AftabStyleEuV3Eu() {
               className="content-stretch flex font-['Geist:Regular'] font-normal gap-[20px] items-start leading-[normal] relative shrink-0 text-[#1a0e14] text-[16px]"
               data-name="r"
             >
-              <p className="relative shrink-0">LinkedIn ↗</p>
-              <p className="relative shrink-0">Behance ↗</p>
-              <p className="relative shrink-0">Fiverr ↗</p>
+              <a className="relative shrink-0" href="https://www.linkedin.com/in/kanza-iqbal" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+              <a className="relative shrink-0" href="https://www.behance.net/kanzaiqbal13" rel="noreferrer" target="_blank">Behance ↗</a>
+              <a
+                className="relative shrink-0"
+                href="https://www.fiverr.com/s/9dGANYe"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Fiverr ↗
+              </a>
             </div>
           </div>
           <div
@@ -231,22 +238,21 @@ export default function ContactV2AftabStyleEuV3Eu() {
             </div>
             <div className="content-start flex flex-wrap gap-[8px] items-start relative shrink-0 w-full" data-name="Chips">
               {helpChips.map((c) => (
-                <div
+                <button
+                  aria-pressed={c === helpSelected}
                   key={c}
-                  className={
+                  className={`inline-flex max-w-full cursor-pointer items-center justify-center rounded-[999px] border px-[16px] py-[10px] text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7a0d3b] focus-visible:ring-offset-2 ${
                     c === helpSelected
-                      ? "bg-[#7a0d3b] content-stretch flex items-start px-[16px] py-[10px] relative rounded-[999px] shrink-0"
-                      : "bg-white border border-[#e7dadd] border-solid content-stretch flex items-start px-[16px] py-[10px] relative rounded-[999px] shrink-0"
-                  }
+                      ? "border-[#7a0d3b] bg-[#7a0d3b] text-white"
+                      : "border-[#e7dadd] bg-white text-[#1a0e14] hover:border-[#7a0d3b]"
+                  }`}
+                  onClick={() => setHelpSelected(c)}
+                  type="button"
                 >
-                  <p
-                    className={`[word-break:break-word] font-['Geist:Regular'] font-normal leading-[normal] relative shrink-0 text-[14px] whitespace-nowrap ${
-                      c === helpSelected ? "text-white" : "text-[#1a0e14]"
-                    }`}
-                  >
+                  <span className="font-['Geist:Regular'] text-[14px] leading-[normal]">
                     {c}
-                  </p>
-                </div>
+                  </span>
+                </button>
               ))}
             </div>
           </div>
@@ -258,22 +264,21 @@ export default function ContactV2AftabStyleEuV3Eu() {
             </div>
             <div className="content-start flex flex-wrap gap-[8px] items-start relative shrink-0 w-full" data-name="Chips">
               {budgetChips.map((c) => (
-                <div
+                <button
+                  aria-pressed={c === budgetSelected}
                   key={c}
-                  className={
+                  className={`inline-flex max-w-full cursor-pointer items-center justify-center rounded-[999px] border px-[16px] py-[10px] text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7a0d3b] focus-visible:ring-offset-2 ${
                     c === budgetSelected
-                      ? "bg-[#7a0d3b] content-stretch flex items-start px-[16px] py-[10px] relative rounded-[999px] shrink-0"
-                      : "bg-white border border-[#e7dadd] border-solid content-stretch flex items-start px-[16px] py-[10px] relative rounded-[999px] shrink-0"
-                  }
+                      ? "border-[#7a0d3b] bg-[#7a0d3b] text-white"
+                      : "border-[#e7dadd] bg-white text-[#1a0e14] hover:border-[#7a0d3b]"
+                  }`}
+                  onClick={() => setBudgetSelected(c)}
+                  type="button"
                 >
-                  <p
-                    className={`[word-break:break-word] font-['Geist:Regular'] font-normal leading-[normal] relative shrink-0 text-[14px] whitespace-nowrap ${
-                      c === budgetSelected ? "text-white" : "text-[#1a0e14]"
-                    }`}
-                  >
+                  <span className="font-['Geist:Regular'] text-[14px] leading-[normal]">
                     {c}
-                  </p>
-                </div>
+                  </span>
+                </button>
               ))}
             </div>
           </div>
@@ -493,14 +498,28 @@ export default function ContactV2AftabStyleEuV3Eu() {
             <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">
               Elsewhere
             </p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Behance ↗</p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Fiverr ↗</p>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.behance.net/kanzaiqbal13" rel="noreferrer" target="_blank">Behance ↗</a>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.linkedin.com/in/kanza-iqbal" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+            <a
+              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
+              href="https://www.fiverr.com/s/9dGANYe"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Fiverr ↗
+            </a>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative" data-name="More">
             <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">
               More
             </p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Resume (PDF) ↓</p>
+            <a
+              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
+              download
+              href="/Kanza-Iqbal-Product-Designer.pdf"
+            >
+              Resume (PDF) ↓
+            </a>
             <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
               Privacy & Impressum
             </p>

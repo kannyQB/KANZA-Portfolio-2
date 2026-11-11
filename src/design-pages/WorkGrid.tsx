@@ -108,16 +108,21 @@ export default function Desktop2() {
         className="bg-[#f8f4f2] border-[#e7dadd] border-b border-solid content-stretch flex items-center justify-between px-[270px] py-[22px] relative shrink-0 w-full"
         data-name="Nav"
       >
-        <div className="[word-break:break-word] content-stretch flex font-['Geist:Medium'] font-medium items-start leading-[28px] overflow-clip relative shrink-0 text-[20px] tracking-[-0.2px] whitespace-nowrap">
+        <Link
+          href="/"
+          aria-label="Kanza Iqbal home"
+          className="[word-break:break-word] content-stretch flex font-['Geist:Medium'] font-medium items-start leading-[28px] overflow-clip relative shrink-0 text-[20px] tracking-[-0.2px] whitespace-nowrap"
+          data-name="Logo"
+        >
           <p className="relative shrink-0 text-[#1a0e14]">Kanza Iqbal</p>
           <p className="relative shrink-0 text-[#7a0d3b]">.</p>
-        </div>
+        </Link>
         <div className="[word-break:break-word] content-stretch flex gap-[40px] items-start leading-[26px] overflow-clip relative shrink-0 text-[16px] whitespace-nowrap">
           <p className="[text-underline-position:from-font] decoration-from-font decoration-solid font-['Geist:Medium'] font-medium relative shrink-0 text-[#7a0d3b] underline">
             Work
           </p>
-          <p className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]">About</p>
-          <p className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]">Contact</p>
+          <Link className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]" href="/about">About</Link>
+          <Link className="font-['Geist:Regular'] font-normal relative shrink-0 text-[#1a0e14]" href="/contact">Contact</Link>
         </div>
         <div className="content-stretch flex gap-[20px] items-center overflow-clip relative shrink-0">
           <p className="[word-break:break-word] font-['Geist:Regular'] font-normal leading-[22px] relative shrink-0 text-[#6e5b63] text-[14px] whitespace-nowrap">
@@ -383,12 +388,13 @@ export default function Desktop2() {
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
             <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">Elsewhere</p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Behance ↗</p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Fiverr ↗</p>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.behance.net/kanzaiqbal13" rel="noreferrer" target="_blank">Behance ↗</a>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.linkedin.com/in/kanza-iqbal" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.fiverr.com/s/9dGANYe" rel="noreferrer" target="_blank">Fiverr ↗</a>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative">
             <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">More</p>
-            <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Resume (PDF) ↓</p>
+            <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" download href="/Kanza-Iqbal-Product-Designer.pdf">Resume (PDF) ↓</a>
             <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">Privacy & Impressum</p>
           </div>
         </div>

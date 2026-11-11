@@ -424,10 +424,12 @@ export default function HomeReviewFixesV2V3Eu() {
                   />
                 </div>
               </button>
-              <div
+              <a
                 className="border-[#1a0e14] border-[1.2px] border-solid content-stretch flex gap-[10px] items-center px-[24px] py-[15px] relative rounded-[999px] shrink-0"
                 data-node-id="346:342"
                 data-name="Button"
+                download
+                href="/Kanza-Iqbal-Product-Designer.pdf"
               >
                 <p
                   className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[20px] relative shrink-0 text-[#1a0e14] text-[15px] whitespace-nowrap"
@@ -435,7 +437,7 @@ export default function HomeReviewFixesV2V3Eu() {
                 >
                   Download CV
                 </p>
-              </div>
+              </a>
             </div>
           </div>
           <div
@@ -1030,18 +1032,32 @@ export default function HomeReviewFixesV2V3Eu() {
               >
                 Elsewhere
               </p>
-              <p
+              <a
                 className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
                 data-node-id="346:774"
+                href="https://www.behance.net/kanzaiqbal13"
+                rel="noreferrer"
+                target="_blank"
               >
                 Behance ↗
-              </p>
-              <p
+              </a>
+              <a
+                className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
+                href="https://www.linkedin.com/in/kanza-iqbal"
+                rel="noreferrer"
+                target="_blank"
+              >
+                LinkedIn ↗
+              </a>
+              <a
                 className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
                 data-node-id="346:775"
+                href="https://www.fiverr.com/s/9dGANYe"
+                rel="noreferrer"
+                target="_blank"
               >
                 Fiverr ↗
-              </p>
+              </a>
             </div>
             <div
               className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
@@ -1054,12 +1070,14 @@ export default function HomeReviewFixesV2V3Eu() {
               >
                 More
               </p>
-              <p
+              <a
                 className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
                 data-node-id="346:778"
+                download
+                href="/Kanza-Iqbal-Product-Designer.pdf"
               >
                 Resume (PDF) ↓
-              </p>
+              </a>
               <p
                 className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
                 data-node-id="346:779"

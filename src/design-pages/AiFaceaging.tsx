@@ -2526,18 +2526,32 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             >
               Elsewhere
             </p>
-            <p
+            <a
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="438:5619"
+              href="https://www.behance.net/kanzaiqbal13"
+              rel="noreferrer"
+              target="_blank"
             >
               Behance ↗
-            </p>
-            <p
+            </a>
+            <a
+              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
+              href="https://www.linkedin.com/in/kanza-iqbal"
+              rel="noreferrer"
+              target="_blank"
+            >
+              LinkedIn ↗
+            </a>
+            <a
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="438:5620"
+              href="https://www.fiverr.com/s/9dGANYe"
+              rel="noreferrer"
+              target="_blank"
             >
               Fiverr ↗
-            </p>
+            </a>
           </div>
           <div
             className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
@@ -2550,12 +2564,14 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
             >
               More
             </p>
-            <p
+            <a
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="438:5623"
+              download
+              href="/Kanza-Iqbal-Product-Designer.pdf"
             >
               Resume (PDF) ↓
-            </p>
+            </a>
             <p
               className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
               data-node-id="438:5624"
