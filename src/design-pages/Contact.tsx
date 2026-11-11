@@ -464,9 +464,12 @@ export default function ContactV2AftabStyleEuV3Eu() {
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame4} />
             </div>
           </div>
-          <div
+          <a
             className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0"
             data-name="CTA/LinkedIn"
+            href="https://www.linkedin.com/in/kanza-iqbal"
+            rel="noreferrer"
+            target="_blank"
           >
             <div className="relative shrink-0 size-[18px]" data-name="Frame">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame5} />
@@ -477,7 +480,7 @@ export default function ContactV2AftabStyleEuV3Eu() {
             <div className="relative shrink-0 size-[14px]" data-name="Frame">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame6} />
             </div>
-          </div>
+          </a>
         </div>
         <div
           className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap"

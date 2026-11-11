@@ -2459,18 +2459,21 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
             </div>
           </div>
-          <div
+          <a
             className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0"
             data-node-id="438:5606"
             data-name="CTA/LinkedIn"
+            href="https://www.linkedin.com/in/kanza-iqbal"
+            rel="noreferrer"
+            target="_blank"
           >
             <div
               className="relative shrink-0 size-[18px]"
               data-node-id="438:5607"
               data-name="Frame"
-            >
+           / >
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame1} />
-            </div>
+            </a>
             <p
               className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[15px] text-white whitespace-nowrap"
               data-node-id="438:5609"
@@ -2594,6 +2597,5 @@ export default function CaseStudyAiFaceAgingV3CheckedVsSourceFile() {
           </p>
         </div>
       </div>
-    </div>
   );
 }

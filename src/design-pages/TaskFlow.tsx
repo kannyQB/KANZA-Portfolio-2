@@ -35,11 +35,12 @@ function BrowserMockup({
         <img alt="" className="block size-[9px]" src={imgEllipse4} />
         <img alt="" className="block size-[9px]" src={imgEllipse5} />
         <img alt="" className="block size-[9px]" src={imgEllipse6} />
-        <div className="bg-[#0b1220] flex flex-[1_0_0] items-center justify-center min-w-px px-[10px] py-[4px] rounded-[999px]">
+        <div className="bg-[#0b1220] flex flex-[1_0_0] items-center justify-center min-w-px px-[10px] py-[4px] rounded-[999px]"/>
+        <a>
           <p className="font-['Geist:SemiBold'] font-semibold leading-[normal] text-[11px] text-white whitespace-nowrap">
             {url}
           </p>
-        </div>
+        </a>
       </div>
       <img alt="" className="block h-auto w-full" src={src} />
     </div>
@@ -2134,22 +2135,25 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
               />
             </div>
           </div>
-          <div
+          <a
             className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0"
             data-node-id="334:9048"
             data-name="CTA/LinkedIn"
+            href="https://www.linkedin.com/in/kanza-iqbal"
+            rel="noreferrer"
+            target="_blank"
           >
             <div
               className="relative shrink-0 size-[18px]"
               data-node-id="334:9049"
               data-name="Frame"
-            >
+           />
               <img
                 alt=""
                 className="absolute block inset-0 max-w-none size-full"
                 src={imgFrame1}
               />
-            </div>
+            </a>
             <p
               className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[15px] text-white whitespace-nowrap"
               data-node-id="334:9051"
@@ -2277,6 +2281,5 @@ export default function CaseStudyTaskFlowDashboardTemplate() {
           </p>
         </div>
       </div>
-    </div>
   )
 }

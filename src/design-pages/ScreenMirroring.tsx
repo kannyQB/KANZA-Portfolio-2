@@ -2445,10 +2445,13 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
               />
             </div>
           </div>
-          <div
+          <a
             className="border border-[rgba(255,255,255,0.35)] border-solid content-stretch flex gap-[10px] items-center overflow-clip px-[18px] py-[11px] relative rounded-[999px] shrink-0"
             data-node-id="346:1145"
             data-name="CTA/LinkedIn"
+            href="https://www.linkedin.com/in/kanza-iqbal"
+            rel="noreferrer"
+            target="_blank"
           >
             <div
               className="relative shrink-0 size-[18px]"
@@ -2478,7 +2481,7 @@ export default function MobileV2PastelStatesTryOutV3Eu() {
                 src={imgFrame2}
               />
             </div>
-          </div>
+          </a>
         </div>
         <div
           className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap"
