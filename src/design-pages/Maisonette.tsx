@@ -725,8 +725,6 @@ export default function CaseStudyMaisonetteV3CheckedVsSourceFile() {
           <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[normal] relative shrink-0 text-[#7a0d3b] text-[48px] whitespace-nowrap">→</p>
         </Link>
       </div>
-     import CopyEmailButton from "@/components/CopyEmailButtom"
-
 <div
   className="bg-[#1a0e14] content-stretch flex flex-col gap-[90px] items-start pb-[80px] pt-[60px] px-[270px] relative shrink-0 w-full"
   data-node-id="346:752"
