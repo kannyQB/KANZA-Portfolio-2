@@ -91,6 +91,7 @@ const caseStudies = [
     tags: ["Mobile app", "AI", "2026"],
 
     image: "/assets/9b1d5.png",
+    beforeImage: "/assets/dd0d7.png",
 
     kpis: [
       { value: "AI", label: "age progression" },
@@ -127,6 +128,7 @@ const caseStudies = [
     tags: ["SaaS", "Real estate", "2026"],
 
     image: "/assets/9204a.png",
+    beforeImage:"/assets/7f452.png",
 
     kpis: [
       { value: "Luxury", label: "estate focus" },
@@ -163,6 +165,7 @@ const caseStudies = [
     tags: ["Mobile app", "Fintech", "2025"],
 
     image: "/assets/aa772.png",
+    beforeImage: "/assets/08cb5.png",
 
     kpis: [
       { value: "Business", label: "toolkit" },
