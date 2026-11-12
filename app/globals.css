@@ -1,52 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap');
 @import 'tailwindcss';
-
-/* =====================================================================
-   FONTS
-   Files must live in /public/fonts/ so Vercel serves them:
-     public/fonts/Geist-Variable.woff2
-     public/fonts/InstrumentSerif-Italic.woff2
-   (The old Figma static links expire after deploy, which is why the font
-   changed on the live site.) Noto Sans / Symbols fall back to system fonts.
-   ===================================================================== */
-@font-face {
-  font-family: 'Geist:Bold';
-  src: url('/fonts/Geist-Variable.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist:Medium';
-  src: url('/fonts/Geist-Variable.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist:Regular';
-  src: url('/fonts/Geist-Variable.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist:SemiBold';
-  src: url('/fonts/Geist-Variable.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Instrument Serif:Italic';
-  src: url('/fonts/InstrumentSerif-Italic.woff2') format('woff2');
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
 
 @layer base {
   html {
@@ -212,7 +165,8 @@
   border-radius: 50%;
   color: white;
   display: flex;
-  font-family: 'Geist:Regular', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 400;
   font-size: 12px;
   height: 32px;
   justify-content: center;
@@ -268,7 +222,8 @@
 
 .featured-cases__eyebrow {
   color: #7a0d3b;
-  font-family: 'Geist:Medium', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.72px;
   margin: 0 0 12px;
@@ -277,7 +232,8 @@
 
 .featured-cases__heading h2 {
   color: #1a0e14;
-  font-family: 'Geist:Medium', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
   font-size: clamp(26px, 3vw, 40px);
   letter-spacing: -1.2px;
   line-height: 1.15;
@@ -378,7 +334,8 @@
 }
 
 .featured-case__content h3 {
-  font-family: 'Geist:Medium', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
   font-size: 21px;
   letter-spacing: -0.5px;
   margin: 12px 0 8px;
@@ -502,7 +459,8 @@
 
 .work-page [data-name^='Filter/'][data-active='true'] p {
   color: #2d3beb;
-  font-family: 'Geist:Medium', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
 }
 
 .work-page [data-name^='Filter/'][data-active='true'] [data-name='Rectangle'] {
@@ -640,7 +598,8 @@
   .mobile-nav a {
     border-radius: 999px;
     color: rgba(255, 255, 255, 0.7);
-    font-family: 'Geist:Medium', sans-serif;
+    font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
     font-size: 13px;
     line-height: 20px;
     padding: 9px 16px;
@@ -1689,5 +1648,175 @@
 
   .about-page .about-help-track > div:first-child > p:last-child {
     display: none;
+  }
+}
+
+/* =====================================================================
+   FONT (applies on every page)
+   Tailwind classes like font-['Geist:Medium'] produce a family name that
+   does not exist, so the browser fell back to Times (serif). These
+   unlayered rules map those classes to the real fonts loaded by the
+   Google Fonts @import at the top of this file. Weight and italic still
+   come from font-medium / font-normal / italic, so the look is unchanged.
+   ===================================================================== */
+body {
+  font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[class*="font-['Geist"] {
+  font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[class*="font-['Instrument_Serif"] {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+/* =====================================================================
+   WORK PAGE: mobile (grid, list and hover versions)
+   Uses structural selectors only (data-name="Nav" / "Body" / "Footer (mine)"
+   that already exist), so the three Work components need no edits.
+   ===================================================================== */
+@media (max-width: 900px) {
+  /* ---- Nav: the bottom pill replaces the links; keep logo + CTA ---- */
+  .work-page [data-name='Nav'] > div:nth-child(2) {
+    display: none;
+  }
+
+  .work-page [data-name='Nav'] > div:nth-child(3) > p {
+    display: none;
+  }
+
+  /* ---- Body ---- */
+  .work-page [data-name='Body'] {
+    gap: 24px;
+    padding-bottom: 72px;
+    padding-top: 40px;
+  }
+
+  /* Header: heading + paragraph / view toggle stack. Before this, the 360px
+     paragraph squeezed the heading column to 1px (one letter per line). */
+  .work-page [data-name='Body'] > div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .work-page [data-name='Body'] > div:first-child > * {
+    flex: none;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .work-page [data-name='Body'] > div:first-child > div[class~='items-end'] {
+    align-items: flex-start;
+  }
+
+  .work-page [class~='min-h-[22px]'] {
+    display: none;
+  }
+
+  /* Filters / toolbar wrap instead of overflowing */
+  .work-page [data-name='Body'] > div:nth-child(2) {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .work-page [data-name='Body'] > div:nth-child(2) > div {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    max-width: 100%;
+  }
+
+  /* ---- Grid view: one column ---- */
+  .work-page [data-name='Body'] > .grid {
+    gap: 44px;
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 0;
+  }
+
+  .work-page [class~='h-[440px]'] {
+    aspect-ratio: 626 / 440;
+    height: auto;
+  }
+
+  /* ---- List view ---- */
+  .work-page [data-name^='Row/'] {
+    padding: 20px;
+  }
+
+  .work-page [data-name^='Row/'] > div[aria-hidden='true'] {
+    display: none;
+  }
+
+  /* sub-title span had line-height inherit from a line-height:0 parent */
+  .work-page [class~='leading-[0]'] > span[class~='text-[20px]'] {
+    line-height: 1.3;
+  }
+
+  .work-page [data-name^='Row/'] > p:first-child ~ :is(a, div:not([aria-hidden])) {
+    margin-left: 46px;
+  }
+
+  .work-page [data-name^='Row/'] > p:nth-child(5) {
+    margin-left: auto;
+  }
+
+  /* list rows built from a Link + meta column + arrow */
+  .work-page [data-name^='Row/'] > a:first-child {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .work-page [data-name^='Row/'] > a:first-child > div:last-child {
+    flex: 1 1 160px;
+  }
+
+  .work-page [data-name^='Row/'] > div[class~='w-[280px]'] {
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .work-page [data-name^='Row/'] > div[class~='w-[280px]'] p {
+    text-align: left;
+  }
+
+  /* ---- Footer ---- */
+  .work-page [data-name^='Footer'] {
+    gap: 48px;
+    padding-top: 48px;
+  }
+
+  .work-page [data-name^='Footer'] [class~='pt-[8px]'] {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .work-page [data-name^='Footer'] p[class~='text-[56px]'] {
+    font-size: clamp(22px, 6.6vw, 30px);
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .work-page [data-name^='Footer'] > div[class~='border-t'] {
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 40px;
+  }
+
+  .work-page [data-name^='Footer'] > div[class~='border-t'] > div {
+    flex: none;
+    width: 100%;
+  }
+
+  .work-page [data-name^='Footer'] > div:last-child {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 8px;
   }
 }
