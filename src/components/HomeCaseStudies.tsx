@@ -164,7 +164,7 @@ const caseStudies = [
 
     tags: ["Mobile app", "Fintech", "2025"],
 
-    image: "/assets/aa772.png",
+    image: "/assets/37738.png",
     beforeImage: "/assets/08cb5.png",
 
     kpis: [
