@@ -1820,3 +1820,328 @@ body {
     padding-top: 8px;
   }
 }
+/* =====================================================================
+   CASE STUDY PAGES: MOBILE
+   Screen Mirroring, Vigil, TaskFlow, AI Face Aging, Freelance Ops, Maisonette
+
+   Paste this at the very END of your global CSS (after the existing
+   "WORK PAGE: mobile" block). Plain CSS, unlayered, so it beats Tailwind.
+
+   Why class selectors? Freelance Ops and Maisonette have NO data-name
+   attributes, so the old [data-name=...] rules never matched them.
+   These rules use Tailwind class names + position instead, so they work
+   on every case study.
+
+   Needs: the page wrapper has class "case-page" and the component root
+   div is its direct child  (.case-page > div).
+   ===================================================================== */
+
+@media (max-width: 900px) {
+  .case-page {
+    overflow-x: clip;
+  }
+
+  /* nowrap is what makes text run off-screen on phones */
+  .case-page [class~='whitespace-nowrap'],
+  .case-page p,
+  .case-page span,
+  .case-page a {
+    white-space: normal;
+  }
+
+  /* ---------- NAV (children: logo / links / right) ---------- */
+  .case-page > div > div:nth-child(1) {
+    padding: 14px 20px;
+    gap: 12px;
+  }
+  .case-page > div > div:nth-child(1) > div:nth-child(2) {
+    display: none; /* bottom pill nav replaces it */
+  }
+  .case-page > div > div:nth-child(1) > div:nth-child(3) > p {
+    display: none;
+  }
+
+  /* ---------- COVER + TITLE CARD ---------- */
+  .case-page > div > div:nth-child(2) {
+    padding: 16px 16px 0;
+  }
+  .case-page > div > div:nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    position: relative;
+    border-radius: 24px;
+  }
+  /* cover image: normal flow, fixed ratio */
+  .case-page > div > div:nth-child(2) > div > img {
+    position: static;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+  /* hide the absolute phone group / overlay image (desktop-only composition) */
+  .case-page > div > div:nth-child(2) > div > div:not(:last-child) {
+    display: none;
+  }
+  /* title card = last child of cover */
+  .case-page > div > div:nth-child(2) > div > div:last-child {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    margin: -48px 12px 0;
+    padding: 24px;
+    gap: 10px;
+    border-radius: 24px;
+  }
+  .case-page [class~='leading-[66px]'],
+  .case-page [class~='leading-[88px]'] {
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  /* "Problem ↓ Flows ↓ ..." row */
+  .case-page [class~='gap-[16px]'][class~='text-[#7a0d3b]'] {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  /* ---------- META (Role / Year / Team / Platform / Status) ---------- */
+  .case-page > div > div:nth-child(3) {
+    padding: 28px 20px 0;
+  }
+  .case-page > div > div:nth-child(3) > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 16px;
+  }
+  .case-page > div > div:nth-child(3) > div > div {
+    flex: none;
+    min-width: 0;
+    width: auto;
+  }
+
+  /* ---------- BODY ---------- */
+  .case-page > div > div:nth-child(4) {
+    padding: 56px 20px 64px;
+    gap: 48px;
+  }
+  /* every "label | content" section row stacks */
+  .case-page [class~='gap-[80px]'] {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .case-page [class~='gap-[80px]'] > * {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .case-page [class~='w-[240px]'] {
+    width: 100%;
+  }
+
+  /* headline sizes */
+  .case-page [class~='text-[28px]'] {
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
+  .case-page [class~='leading-[34px]'] {
+    line-height: 1.28;
+  }
+  .case-page [class~='text-[26px]'] {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  /* ---------- "Before" flow cards + "Three zones" (01 → 02 → 03 ...) ---------- */
+  .case-page :has(> [class~='bg-[#f1e8e9]']) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .case-page :has(> [class~='bg-[#f1e8e9]']) > div {
+    flex: none;
+    width: 100%;
+  }
+  .case-page :has(> [class~='bg-[#f1e8e9]']) > p {
+    align-self: center;
+    transform: rotate(90deg); /* → becomes ↓ */
+  }
+  .case-page [class~='bg-white'][class~='p-[28px]'] {
+    padding: 20px 16px;
+  }
+
+  /* ---------- Phases / Numbers / Testing facts / A11y columns ---------- */
+  .case-page :has(> [class~='flex-[1_0_0]'][class~='border-t']) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px 20px;
+  }
+  .case-page :has(> [class~='flex-[1_0_0]'][class~='border-t']) > * {
+    flex: none;
+    width: auto;
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  /* ---------- Persona + insights ---------- */
+  .case-page :has(> [class~='w-[300px]']) {
+    flex-direction: column;
+  }
+  .case-page [class~='w-[300px]'] {
+    width: 100%;
+  }
+
+  /* ---------- KEY FLOWS: phone strips scroll sideways ---------- */
+  .case-page [class~='px-[40px]'][class~='py-[36px]'] {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+  .case-page :has(> div > [class~='w-[210px]']) {
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .case-page :has(> div > [class~='w-[210px]']) > div {
+    flex: none;
+    scroll-snap-align: center;
+  }
+  .case-page [class~='opacity-35'] {
+    display: none; /* timeline line does not fit a scroller */
+  }
+
+  /* ---------- HOME (annotated phone) ---------- */
+  .case-page [class~='bg-[#dce7f8]'] {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 20px;
+  }
+  .case-page [class~='bg-[#dce7f8]'] > div:last-child {
+    flex: none;
+    width: 100%;
+  }
+  /* FIX: the old rule collapsed h-[529px] to 280px and squashed this phone */
+  .case-page [class~='bg-[#dce7f8]'] > [class~='h-[529px]'] {
+    height: auto;
+    min-height: 0;
+    width: min(250px, 70vw);
+    aspect-ratio: 250 / 529;
+  }
+
+  /* ---------- STATES (5 rotated pastel cards) ---------- */
+  .case-page [class~='h-[590px]'] {
+    height: auto;
+    min-height: 0;
+    gap: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 28px 12px 36px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .case-page [class~='h-[590px]'] > div {
+    flex: none;
+    scroll-snap-align: center;
+  }
+
+  /* ---------- FINAL SCREENS (TaskFlow / Vigil mockup stage) ---------- */
+  .case-page [class~='bg-[#f1e8e9]'][class~='p-[28px]'] {
+    padding: 16px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .case-page [class~='bg-[#f1e8e9]'][class~='p-[28px]'] > :not([class~='w-[190px]']) {
+    flex: none;
+    width: 100%;
+  }
+  .case-page [class~='w-[190px]'] {
+    align-self: center;
+  }
+
+  /* ---------- NEXT CASE STUDY ---------- */
+  .case-page > div > div:nth-last-child(2) {
+    padding: 0 20px 56px;
+  }
+  .case-page a[href^='/work/'] {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 32px;
+  }
+  .case-page a[href^='/work/'] > div:first-child {
+    flex: none;
+    width: 100%;
+  }
+  .case-page a[href^='/work/'] > div:nth-child(2) {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 260 / 170;
+  }
+  .case-page a[href^='/work/'] [class~='leading-[58px]'] {
+    font-size: clamp(30px, 9.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  .case-page a[href^='/work/'] > p {
+    font-size: 32px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .case-page > div > div:last-child {
+    padding: 72px 20px 32px;
+    gap: 28px;
+  }
+  /* put the em-based letter-spacing on the spans themselves
+     (the parent p is font-size:0, so em there would compute to 0) */
+  .case-page > div > div:last-child [class~='text-[140px]'],
+  .case-page > div > div:last-child [class~='text-[150px]'] {
+    font-size: clamp(44px, 14.5vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+  .case-page > div > div:last-child [class~='leading-[60px]'] {
+    font-size: clamp(20px, 6vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+  .case-page > div > div:last-child :has(> [class~='leading-[60px]']) {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .case-page > div > div:last-child [class~='border-t'][class~='border-white'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+    padding-top: 36px;
+  }
+  .case-page > div > div:last-child [class~='border-t'][class~='border-white'] > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .case-page > div > div:last-child > div:last-child {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-page > div > div:nth-child(3) > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .case-page > div > div:nth-child(2) > div > img {
+    aspect-ratio: 1 / 1;
+  }
+}
