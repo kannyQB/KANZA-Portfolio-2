@@ -1500,3 +1500,207 @@
 .case-study-card__media--stand-in .comparison-slider__before-image {
   filter: grayscale(1) contrast(0.85) brightness(1.05);
 }
+/* =====================================================================
+   MOBILE RESPONSIVE FIXES (added)
+   Rules live ONLY inside max-width media queries, so desktop (>900px)
+   is untouched. Plain CSS (unlayered) so it overrides Tailwind utilities.
+   ===================================================================== */
+@media (max-width: 900px) {
+  /* Fixed 270px/280px side padding from the desktop canvas */
+  .design-page [class~='px-[270px]'],
+  .design-page [class~='px-[280px]'] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Display sizes that were not covered above (96/104 home hero, 76/82/100 about) */
+  .design-page [class~='text-[104px]'],
+  .design-page [class~='text-[100px]'],
+  .design-page [class~='text-[96px]'],
+  .design-page [class~='text-[82px]'],
+  .design-page [class~='text-[76px]'] {
+    font-size: clamp(40px, 12.5vw, 62px);
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+  }
+
+  /* ---- Home ---- */
+  .home-page [data-name='Hero'] [data-name='Top'] > p {
+    position: static;
+    top: auto;
+    white-space: normal;
+  }
+
+  .home-page [data-name='Hero'] [data-name='Top'] > div {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: flex-start;
+  }
+
+  .home-page [data-name='Hero'] [data-name='Top'] > div > p {
+    white-space: normal;
+  }
+
+  .home-page [data-name='Hero'] [data-name='Row'] {
+    top: auto;
+  }
+
+  /* Hero image: the earlier rule looked for w-[484px] but the wrapper is w-[500px],
+     so on mobile the image sat off-screen at x = -380px. */
+  .home-page [data-name='Hero'] > div[class*='absolute'][class*='w-[500px]'] {
+    align-self: center;
+    height: auto;
+    inset: auto;
+    max-width: 420px;
+    order: 4;
+    position: relative;
+    width: 100%;
+  }
+
+  .home-page [data-name='Hero'] > div[class*='absolute'][class*='w-[500px]'] > div {
+    height: auto;
+    width: 100%;
+  }
+
+  .home-page [data-name='Headline + sub'] {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .home-page [data-name='Section Header'] > [data-name='Left'] {
+    flex: none;
+    width: 100%;
+  }
+
+  .design-page [data-name='Bottom bar'] {
+    overflow: visible;
+  }
+
+  .design-page [data-name='Bottom bar'] p,
+  .design-page [data-name^='Footer'] p {
+    white-space: normal;
+  }
+
+  /* Existing leading-reset rules set line-height: inherit, but Figma wrappers use
+     leading-[0], so headings collapsed to line-height 0 and overlapped. */
+  .design-page [class~='leading-[0]'] [class~='text-[150px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[140px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[104px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[100px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[96px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[92px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[88px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[84px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[82px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[78px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[76px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[72px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[70px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[64px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[56px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[52px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[48px]'],
+  .design-page [class~='leading-[0]'] [class~='text-[44px]'] {
+    line-height: 1.04;
+  }
+
+  .design-page [data-name='Bottom bar'] p,
+  .design-page [data-name^='Footer'] p {
+    max-width: 100%;
+  }
+
+  /* ---- Contact ---- */
+  .contact-page [data-name='What happens next'],
+  .contact-page [data-name='FAQ'] {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .contact-page [data-name='What happens next'] > *,
+  .contact-page [data-name='FAQ'] > * {
+    flex: none;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-page [data-name='What happens next'] > .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-page [data-name='What happens next'] > .grid > div {
+    padding: 24px;
+  }
+
+  /* ---- About: "How I work" rows stack instead of squeezing ---- */
+  .about-page [data-name='Head'],
+  .about-page [data-name^='Row/'] {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-page [data-name='Head'] > *,
+  .about-page [data-name^='Row/'] > * {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .about-page [data-name='Head'] > p {
+    flex: none;
+  }
+}
+
+/* "What I do" horizontal gsap scroller only runs >= 768px, so below that
+   it becomes a simple vertical stack of cards. */
+@media (max-width: 767px) {
+  .about-page [data-name='What I do — How I can help'] > div {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+
+  .about-page .about-help-track {
+    display: block;
+    width: 100%;
+  }
+
+  /* everything (eyebrow, heading, intro, 4 cards, hint) is a child of one grid */
+  .about-page .about-help-track > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .about-page .about-help-track > div:first-child > * {
+    height: auto;
+    margin: 0;
+    white-space: normal;
+    width: 100%;
+  }
+
+  .about-page .about-help-track > div:first-child > div {
+    margin-top: 12px;
+  }
+
+  .about-page .about-help-track > div:first-child > div > div {
+    rotate: none;
+    width: 100%;
+  }
+
+  .about-page .about-help-track [data-name^='Card/'] {
+    gap: 28px;
+    height: auto;
+    justify-content: flex-start;
+    padding: 32px 24px;
+    width: 100%;
+  }
+
+  .about-page .about-help-track > div:first-child > p:last-child {
+    display: none;
+  }
+}
