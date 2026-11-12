@@ -1,6 +1,9 @@
 const assetPathPrefix = "/assets"
 const imgIconArrow = `${assetPathPrefix}/c3095.svg`
 const imgFrame = `${assetPathPrefix}/bbcfd.svg`
+const imgFrame4 = `${assetPathPrefix}/d4cb8.svg`
+import CopyEmailButton from "@/components/CopyEmailButtom"
+
 
 export default function MessageSentV2V3Eu() {
   return (
@@ -350,117 +353,99 @@ export default function MessageSentV2V3Eu() {
           form again.
         </p>
       </div>
-      <div
-        className="[word-break:break-word] bg-[#1a0e14] content-stretch flex flex-col gap-[40px] items-start pb-[40px] pt-[56px] px-[270px] relative shrink-0 text-white w-full whitespace-nowrap"
-        data-node-id="346:1693"
-        data-name="Footer (v2)"
-      >
-        <div
-          className="border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 w-full"
-          data-node-id="346:1708"
-          data-name="Columns"
-        >
-          <div
-            className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-            data-node-id="346:1709"
-            data-name="Local time"
-          >
-            <p
-              className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-              data-node-id="346:1710"
-            >
-              Based in
-            </p>
-            <p
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1711"
-            >
-              Lahore,Pakistan 
-            </p>
-            <p
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1712"
-            >
-              Usually replies within 1 working day
-            </p>
-          </div>
-          <div
-            className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-            data-node-id="346:1713"
-            data-name="Socials"
-          >
-            <p
-              className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-              data-node-id="346:1714"
-            >
-              Elsewhere
-            </p>
-            <a
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1715"
-              href="https://www.behance.net/kanzaiqbal13"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Behance ↗
-            </a>
-            <a
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              href="https://www.linkedin.com/in/kanza-iqbal"
-              rel="noreferrer"
-              target="_blank"
-            >
-              LinkedIn ↗
-            </a>
-            <a
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1716"
-              href="https://www.fiverr.com/s/9dGANYe"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Fiverr ↗
-            </a>
-          </div>
-          <div
-            className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative"
-            data-node-id="346:1717"
-            data-name="More"
-          >
-            <p
-              className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase"
-              data-node-id="346:1718"
-            >
-              More
-            </p>
-            <a
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1719"
-              download
-              href="/Kanza-Iqbal-Product-Designer.pdf"
-            >
-              Resume (PDF) ↓
-            </a>
-            <p
-              className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]"
-              data-node-id="346:1720"
-            >{`Privacy & Impressum`}</p>
-          </div>
-        </div>
-        <div
-          className="content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] w-full"
-          data-node-id="346:1721"
-          data-name="Bottom bar"
-        >
-          <p
-            className="relative shrink-0"
-            data-node-id="346:1722"
-          >{`© 2026 Kanza Iqbal · Designed & built with care in Lahore,Pakistan`}</p>
-          <p className="relative shrink-0" data-node-id="346:1723">
-            Back to top ↑
-          </p>
-        </div>
-      </div>
+    import CopyEmailButton from "@/components/CopyEmailButtom"
+
+<div
+  className="bg-[#1a0e14] content-stretch flex flex-col gap-[90px] items-start pb-[80px] pt-[60px] px-[270px] relative shrink-0 w-full"
+  data-node-id="346:752"
+  data-name="Footer (mine)"
+>
+  <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[#f6dae5] text-[12px] tracking-[0.72px] uppercase whitespace-nowrap">
+    Got something in mind?
+  </p>
+
+  <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] text-white tracking-[-7px] whitespace-nowrap">
+    <span className="leading-[133px] text-[140px]">{`Let’s work `}</span>
+    <span className="font-['Instrument_Serif:Italic'] italic leading-[133px] text-[#f6dae5] text-[150px] tracking-[-3px]">
+      together.
+    </span>
+  </p>
+
+  <div
+    className="content-stretch flex gap-[16px] items-center pt-[8px] relative shrink-0"
+    data-name="Email row"
+  >
+    <p className="[word-break:break-word] font-['Geist:Medium'] font-medium leading-[60px] relative shrink-0 text-[56px] text-white tracking-[-1.68px] whitespace-nowrap">
+      kannyqb@gmail.com
+    </p>
+
+    <CopyEmailButton
+      email="kannyqb@gmail.com"
+      dataName="Copy email (icon)"
+      className="bg-[rgba(255,255,255,0.08)] hover:bg-[rgba(255,255,255,0.16)] transition-colors flex items-center justify-center rounded-full shrink-0 size-[44px] text-white cursor-pointer"
+    >
+      <img
+        alt=""
+        className="pointer-events-none block size-[18px]"
+        src={imgFrame4}
+      />
+    </CopyEmailButton>
+  </div>
+
+  <div
+    className="[word-break:break-word] border-solid border-t border-white content-stretch flex gap-[48px] items-start overflow-clip pt-[56px] relative shrink-0 text-white w-full whitespace-nowrap"
+    data-name="Columns"
+  >
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative" data-name="Local time">
+      <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">
+        Based in
+      </p>
+      <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
+        Lahore, Pakistan
+      </p>
+      <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
+        Usually replies within 1 working day
+      </p>
+    </div>
+
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative" data-name="Socials">
+      <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">
+        Elsewhere
+      </p>
+      <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.behance.net/kanzaiqbal13" rel="noreferrer" target="_blank">
+        Behance ↗
+      </a>
+      <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.linkedin.com/in/kanza-iqbal" rel="noreferrer" target="_blank">
+        LinkedIn ↗
+      </a>
+      <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" href="https://www.fiverr.com/s/9dGANYe" rel="noreferrer" target="_blank">
+        Fiverr ↗
+      </a>
+    </div>
+
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px overflow-clip relative" data-name="More">
+      <p className="font-['Geist:Medium'] font-medium leading-[16px] relative shrink-0 text-[12px] tracking-[0.72px] uppercase">
+        More
+      </p>
+      <a className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]" download href="/Kanza-Iqbal-Product-Designer.pdf">
+        Resume (PDF) ↓
+      </a>
+      <p className="font-['Geist:Regular'] font-normal leading-[26px] relative shrink-0 text-[16px]">
+        Privacy &amp; Impressum
+      </p>
+    </div>
+  </div>
+
+  <div
+    className="[word-break:break-word] content-stretch flex font-['Geist:Regular'] font-normal items-start justify-between leading-[22px] overflow-clip pt-[40px] relative shrink-0 text-[14px] text-white w-full whitespace-nowrap"
+    data-name="Bottom bar"
+  >
+    <p className="relative shrink-0">
+      © 2026 Kanza Iqbal · Designed &amp; built with care in Lahore, Pakistan
+    </p>
+    <a href="#top" className="relative shrink-0">Back to top ↑</a>
+  </div>
+</div>
     </div>
   )
 }
