@@ -127,8 +127,8 @@ const caseStudies = [
 
     tags: ["SaaS", "Real estate", "2026"],
 
-    image: "/assets/9204a.png",
-    beforeImage:"/assets/7f452.png",
+    image: "/assets/9972b.png",
+    beforeImage:"/assets/088f3.png",
 
     kpis: [
       { value: "Luxury", label: "estate focus" },
